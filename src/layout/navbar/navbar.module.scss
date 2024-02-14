@@ -1,0 +1,34 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+// TODO(Kacper): Fix for bigger screens extending indefinitely + alignment with content
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $screen-md) {
+    align-items: initial;
+    justify-content: space-around;
+  }
+
+  .items {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-around;
+      align-self: center;
+      gap: 15px;
+    }
+
+    .item {
+      white-space: nowrap;
+      width: min-content;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .image {
+    flex-shrink: 0;
+  }
+}
