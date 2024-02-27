@@ -1,0 +1,17 @@
+.button {
+  border: 0;
+  background: white;
+  padding: 8px 24px;
+  
+  width: 165px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  cursor: pointer;
+  border:1px solid green;
+  border-radius: 8px; //TODO implement gradient borders here
+
+  &.active{
+    background: linear-gradient(180deg, #8ece42 0%, #8fe2d2 100%);
+  }
+}
