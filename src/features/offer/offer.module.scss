@@ -1,0 +1,19 @@
+.buttonsWrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.heading {
+  background: linear-gradient(180deg, #8ece42 0%, #8fe2d2 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 25px 0;
+}
