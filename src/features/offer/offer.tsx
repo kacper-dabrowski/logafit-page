@@ -1,3 +1,4 @@
+import { SecondaryHeader } from "@/features/shared/components/headers";
 import { OfferButton } from "./button/button";
 import { Card } from "./card/card";
 import styles from "./offer.module.scss";
@@ -5,7 +6,7 @@ import styles from "./offer.module.scss";
 export function Offer() {
   return (
     <div>
-      <h2>Oferta</h2>
+      <SecondaryHeader>Oferta</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton variant="green" active>
           Szkoła pływania
