@@ -1,0 +1,40 @@
+.card {
+  background-color: #eeecfa;
+  color: #4433b2;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+
+  .contentWrapper {
+    display: flex;
+    gap: 40px;
+  }
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #dbd7f4;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bold,
+.heading {
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.heading {
+  font-weight: 20px;
+}

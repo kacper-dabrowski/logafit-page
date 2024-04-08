@@ -1,0 +1,28 @@
+.button {
+  border: 0;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 8px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  --color-background: transparent;
+  --color-text: black;
+
+  &.yellow {
+    --color-background: #f4ca34;
+    --color-text: #7e6407;
+  }
+
+  &.purple {
+    --color-background: #4433b2;
+    --color-text: #dbd7f4;
+  }
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
