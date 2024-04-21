@@ -1,12 +1,23 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
 .wrapper {
-  margin-top: 80px;
+  @media (min-width: $screen-md) {
+    margin-top: 80px;
+  }
+
+  margin-top: 30px;
 }
 
 .buttonsWrapper {
+  @media (min-width: $screen-lg) {
+    justify-content: initial;
+  }
+
   display: flex;
   gap: 15px;
   white-space: nowrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .cardWrapper {

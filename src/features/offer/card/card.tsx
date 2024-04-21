@@ -37,8 +37,9 @@ export function Card({
           <Image
             src="/assets/arrow-right.svg"
             alt="strzałka w prawo"
-            width={24}
-            height={24}
+            width={12}
+            height={12}
+            // TODO load desktop image
           />
         </Link>
       </div>
