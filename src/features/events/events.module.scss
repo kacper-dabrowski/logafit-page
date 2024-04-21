@@ -21,8 +21,10 @@
 }
 
 .cardWrapper {
-  margin: 30px auto;
-  width: 60%;
+  @media (min-width: $screen-lg) {
+    margin: 30px auto;
+    width: 60%;
+  }
 }
 
 .switchesWrapper {

@@ -1,41 +1,54 @@
 .card {
+  margin-top: 25px;
   background-color: #eeecfa;
+  padding: 15px 20px;
+  border-radius: 28px;
+}
+
+.heading {
   color: #4433b2;
-  position: relative;
-  border-radius: 20px;
-  padding: 20px;
-
-  .contentWrapper {
-    display: flex;
-    gap: 40px;
-  }
-
-  .textWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: #dbd7f4;
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.bold,
-.heading {
+  font-size: 12px;
   font-weight: bold;
-  line-height: 32px;
 }
 
-.heading {
-  font-weight: 20px;
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  font-size: 9px;
+  background-color: #dbd7f4;
+  padding: 8px;
+  border-radius: 28px;
+  color: #4433b2;
+  font-weight: 600;
+  display: flex;
+  place-items: center;
+  gap: 5px;
+  line-height: 12px;
+}
+
+.bottomSection {
+  display: flex;
+  gap: 15px;
+}
+
+.textWrapper {
+  font-size: 9px;
+  color: #4433b2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.textWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
