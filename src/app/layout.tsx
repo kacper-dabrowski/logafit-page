@@ -3,19 +3,20 @@ import { interFont } from "../fonts/inter";
 import { Navbar } from "../layout/navbar/navbar";
 import "./index.scss";
 import styles from "./layout.module.scss";
+import { Footer } from "../layout/footer/footer";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const classNames = clsx(interFont.className, styles.content);
+  const classNames = clsx(interFont.className);
   return (
     <html lang="en">
       <body className={classNames}>
         <Navbar additionalClasses={styles.navbar} />
         <main className={styles.content}>{children}</main>
-        <footer className={styles.footer} />
+        <Footer />
       </body>
     </html>
   );
