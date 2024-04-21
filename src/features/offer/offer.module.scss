@@ -1,20 +1,40 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
 .buttonsWrapper {
-  margin-top: 20px;
-  display: flex;
   gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+
+  @media (min-width: $screen-lg) {
+    justify-content: initial;
+    margin-top: 20px;
+  }
+
+  display: flex;
 }
 
 .cardsWrapper {
+  margin-top: 25px;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 0;
+  }
+
   display: flex;
   gap: 15px;
   justify-content: center;
 }
 
 .heading {
-  background: linear-gradient(180deg, #8ece42 0%, #8fe2d2 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin: 25px 0;
-  font-weight: 600;
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+    background: linear-gradient(180deg, #8ece42 0%, #8fe2d2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 25px 0;
+    font-weight: 600;
+  }
 }
