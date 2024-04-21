@@ -1,7 +1,12 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
 .footer {
   background-color: #0d1606;
   color: #f6fbf2;
   padding: 0 20px 30px 15px;
+  @media (min-width: $screen-md) {
+    padding: 30px 180px 50px 180px;
+  }
 }
 
 .iconsWrapper {
