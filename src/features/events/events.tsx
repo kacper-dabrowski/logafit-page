@@ -9,7 +9,9 @@ export function Events() {
     <div className={styles.wrapper}>
       <SecondaryHeader>Wydarzenia</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
-        <OfferButton variant="blue">Obozy i kolonie</OfferButton>
+        <OfferButton variant="blue" active>
+          Obozy i kolonie
+        </OfferButton>
         <OfferButton variant="green">Kursy i szkolenia</OfferButton>
         <OfferButton variant="lime">Turnusy zdrowotne</OfferButton>
       </div>
