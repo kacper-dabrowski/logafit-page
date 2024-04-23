@@ -4,11 +4,11 @@ import styles from "./aboutUs.module.scss";
 
 export function AboutUs() {
   return (
-    <div>
+    <div className={styles.container}>
       <SecondaryHeader>O nas</SecondaryHeader>
       <div className={styles.wrapper}>
         <Image
-          src="/assets/about-us-logo.png"
+          src="/assets/about-us-logo.svg"
           width={255}
           height={95}
           alt="logo logafit"
