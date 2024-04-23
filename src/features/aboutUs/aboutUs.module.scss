@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+.upperWave {
+  margin-bottom: 15px;
+}
+
+.bottomWave {
+  margin-top: 15px;
+}
+
+.text {
+  line-height: 16px;
+  font-size: 10px;
+}
