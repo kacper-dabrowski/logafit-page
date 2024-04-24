@@ -25,6 +25,7 @@ export function InfoIcon({
     <div className={styles.infoIcon}>
       <Image src={imgSrc} width={12} height={12} alt={imgAlt} />
       <a
+        className={styles.link}
         href={href}
         target={target === LinkTarget.BlankPage ? "_blank" : undefined}
         rel="noreferrer"
