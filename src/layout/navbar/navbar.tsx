@@ -12,27 +12,36 @@ export function Navbar({ additionalClasses }: NavbarProps) {
 
   return (
     <nav className={classes}>
-      <Link href="/">
+      <Link href="/" aria-label="strona główna">
         <Image
           className={styles.image}
           src="/assets/logo.png"
-          alt=""
+          alt="odnośnik do strony głównej"
           width={240}
           height={90}
+          priority
         />
       </Link>
       <ul className={styles.items}>
         <li className={styles.item}>
-          <Link href="/oferta">Oferta</Link>
+          <Link href="/#oferta" aria-label="oferta">
+            Oferta
+          </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/wydarzenia">Wydarzenia</Link>
+          <Link href="/#wydarzenia" aria-label="wydarzenia">
+            Wydarzenia
+          </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/o-nas">O nas</Link>
+          <Link href="/#o-nas" aria-label="o nas">
+            O nas
+          </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/kontakt">Kontakt</Link>
+          <Link href="/#kontakt" aria-label="kontakt">
+            Kontakt
+          </Link>
         </li>
       </ul>
     </nav>
