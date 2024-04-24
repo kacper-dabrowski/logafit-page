@@ -5,6 +5,7 @@ import { Navbar } from "../layout/navbar/navbar";
 import "./index.scss";
 import styles from "./layout.module.scss";
 import { Footer } from "../layout/footer/footer";
+import { SeoTags } from "../features/seo/seoTags";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default function RootLayout({
   const classNames = clsx(interFont.className);
   return (
     <html lang="en">
-      <title>Logafit - Centrum Zdrowia i Fitnessu</title>
+      <SeoTags />
       <body className={classNames}>
         <Navbar additionalClasses={styles.navbar} />
         <main className={styles.content}>{children}</main>
