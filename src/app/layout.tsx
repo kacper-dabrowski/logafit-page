@@ -13,6 +13,7 @@ export default function RootLayout({
   const classNames = clsx(interFont.className);
   return (
     <html lang="en">
+      <title>Logafit</title>
       <body className={classNames}>
         <Navbar additionalClasses={styles.navbar} />
         <main className={styles.content}>{children}</main>
