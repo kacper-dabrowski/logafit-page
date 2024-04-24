@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { interFont } from "../fonts/inter";
 import { Navbar } from "../layout/navbar/navbar";
 import "./index.scss";
@@ -13,11 +14,12 @@ export default function RootLayout({
   const classNames = clsx(interFont.className);
   return (
     <html lang="en">
-      <title>Logafit</title>
+      <title>Logafit - Centrum Zdrowia i Fitnessu</title>
       <body className={classNames}>
         <Navbar additionalClasses={styles.navbar} />
         <main className={styles.content}>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
