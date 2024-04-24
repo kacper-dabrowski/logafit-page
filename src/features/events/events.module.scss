@@ -21,6 +21,11 @@
 }
 
 .cardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: $screen-lg) {
     margin: 30px auto;
     width: 60%;
