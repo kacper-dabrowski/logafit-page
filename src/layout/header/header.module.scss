@@ -1,0 +1,24 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+  }
+}
+
+.headerMobile {
+  display: block;
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+}
