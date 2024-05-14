@@ -30,16 +30,27 @@ export function Card({
         <Image alt={headerText} src={imageSrc} width={202} height={151} />
       </div>
       <div className={styles.textContainer}>
-        <h3 className={styles.heading}>{headerText}</h3>
-        <p className={styles.text}>{contentText}</p>
+        <div>
+          <h3 className={styles.heading}>{headerText}</h3>
+        </div>
+        <div>
+          <p className={styles.text}>{contentText}</p>
+        </div>
         <Link className={learnMoreClasses} href={learnMoreUrl}>
           <span>Dowiedz się więcej</span>
           <Image
+            className={styles.arrowMobile}
             src="/assets/arrow-right.svg"
             alt="strzałka w prawo"
             width={12}
             height={12}
-            // TODO load desktop image
+          />
+          <Image
+            className={styles.arrowDesktop}
+            src="/assets/arrow-right.svg"
+            alt="strzałka w prawo"
+            width={24}
+            height={24}
           />
         </Link>
       </div>
