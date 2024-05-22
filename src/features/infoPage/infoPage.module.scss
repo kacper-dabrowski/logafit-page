@@ -1,0 +1,88 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
+.header {
+  color: #2f4777;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mainHeader {
+  margin: 30px auto;
+}
+
+.withMargin {
+  @media (min-width: $screen-lg) {
+    margin-bottom: 30px;
+  }
+
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 12px;
+
+  @media (min-width: $screen-lg) {
+    max-width: 500px;
+    line-height: 24px;
+    font-size: 18px;
+  }
+}
+
+.priceContainer {
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-content: center;
+    justify-items: center;
+  }
+}
+
+.descriptionContainer {
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .image {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      place-self: center center;
+    }
+  }
+}
+
+.price {
+  font-weight: bold;
+  color: #3a6699;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 32px;
+  }
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  gap: 15px;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 60px;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
