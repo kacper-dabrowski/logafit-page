@@ -78,19 +78,3 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
-
-.arrowMobile {
-  display: block;
-
-  @media (min-width: $screen-lg) {
-    display: none;
-  }
-}
-
-.arrowDesktop {
-  display: none;
-
-  @media (min-width: $screen-lg) {
-    display: block;
-  }
-}
