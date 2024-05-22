@@ -2,6 +2,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 import styles from "./card.module.scss";
+import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 
 interface CardProps {
   headerText: string;
@@ -38,19 +39,11 @@ export function Card({
         </div>
         <Link className={learnMoreClasses} href={learnMoreUrl}>
           <span>Dowiedz się więcej</span>
-          <Image
-            className={styles.arrowMobile}
+          <ResponsiveImage
             src="/assets/arrow-right.svg"
             alt="strzałka w prawo"
-            width={12}
-            height={12}
-          />
-          <Image
-            className={styles.arrowDesktop}
-            src="/assets/arrow-right.svg"
-            alt="strzałka w prawo"
-            width={24}
-            height={24}
+            width={{ mobile: 12, desktop: 24 }}
+            height={{ mobile: 12, desktop: 24 }}
           />
         </Link>
       </div>
