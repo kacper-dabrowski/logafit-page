@@ -1,0 +1,22 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
+.text {
+  @media (min-width: $screen-lg) {
+    font-size: 18px;
+  }
+
+  font-size: 14px;
+  line-height: 30px;
+  color: #556790;
+}
+
+.arrow {
+  transform: rotate(180deg);
+}
+
+.container {
+  width: 300px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
