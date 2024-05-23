@@ -19,7 +19,9 @@ export default function RootLayout({
       <SeoTags />
       <body className={classNames}>
         <Navbar additionalClasses={styles.navbar} />
-        <main className={styles.content}>{children}</main>
+        <div className={styles.mainWrapper}>
+          <main className={styles.content}>{children}</main>
+        </div>
         <Footer />
         <SpeedInsights />
       </body>
