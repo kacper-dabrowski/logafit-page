@@ -5,6 +5,7 @@ export function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        <div className={styles.background} />
         <Image
           src="/assets/header.svg"
           width={1000}
@@ -13,6 +14,8 @@ export function Header() {
         />
       </div>
       <div className={styles.headerMobile}>
+        <div className={styles.background} />
+
         <Image
           src="/assets/header_mobile.svg"
           width={768}

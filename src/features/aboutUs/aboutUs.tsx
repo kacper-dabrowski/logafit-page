@@ -5,6 +5,7 @@ import styles from "./aboutUs.module.scss";
 export function AboutUs() {
   return (
     <div className={styles.container}>
+      <div className={styles.background} />
       <SecondaryHeader>O nas</SecondaryHeader>
       <div className={styles.wrapper}>
         <Image

@@ -27,7 +27,8 @@
   align-items: center;
 
   @media (min-width: $screen-lg) {
-    margin: 30px auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
     width: 60%;
   }
 }

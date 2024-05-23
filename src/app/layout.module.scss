@@ -1,16 +1,21 @@
+@import "../shared/styles/variables/breakpoints.scss";
+
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-.navbar,
 .footer {
-  flex: 1;
   text-align: center;
 }
 
 .content {
   flex: 3;
-  padding: 20px;
+}
+
+.mainWrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
