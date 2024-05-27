@@ -7,7 +7,7 @@ export function Header() {
       <div className={styles.header}>
         <div className={styles.background} />
         <Image
-          src="/assets/header.svg"
+          src="/assets/header.png"
           width={1000}
           height={500}
           alt="nagłówek"
@@ -15,9 +15,8 @@ export function Header() {
       </div>
       <div className={styles.headerMobile}>
         <div className={styles.background} />
-
         <Image
-          src="/assets/header_mobile.svg"
+          src="/assets/header_mobile.png"
           width={768}
           height={500}
           alt="nagłówek mobilny"
