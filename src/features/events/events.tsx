@@ -1,3 +1,5 @@
+"use client";
+
 import { SecondaryHeader } from "@/features/shared/components/headers";
 import { OfferButton } from "../offer/button/button";
 import { EventCard } from "./card/card";
@@ -9,11 +11,15 @@ export function Events() {
     <div className={styles.wrapper}>
       <SecondaryHeader>Wydarzenia</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
-        <OfferButton variant="blue" active>
+        <OfferButton variant="blue" active onClick={() => {}}>
           Obozy i kolonie
         </OfferButton>
-        <OfferButton variant="green">Kursy i szkolenia</OfferButton>
-        <OfferButton variant="lime">Turnusy zdrowotne</OfferButton>
+        <OfferButton variant="green" onClick={() => {}}>
+          Kursy i szkolenia
+        </OfferButton>
+        <OfferButton variant="lime" onClick={() => {}}>
+          Turnusy zdrowotne
+        </OfferButton>
       </div>
       <div className={styles.cardWrapper}>
         <EventCard />
