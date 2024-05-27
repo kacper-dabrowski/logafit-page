@@ -8,7 +8,7 @@ interface CardProps {
   src: string;
   alt: string;
   heading: string;
-  variant: "softTeal" | "azureBlue" | "plum" | "tropicalCyan";
+  variant: "softTeal" | "azureBlue" | "plum" | "tropicalCyan" | "sunsetHorizon";
 }
 
 export function Card({ src, alt, heading, variant }: CardProps) {
@@ -32,7 +32,7 @@ export function Card({ src, alt, heading, variant }: CardProps) {
             <p>Dowiedz się więcej</p>
             {src ? (
               <ResponsiveImage
-                src="/assets/arrow-right.svg"
+                src="/assets/arrow-right-black.svg"
                 alt="strzałka w prawo"
                 width={{ mobile: 12, desktop: 24 }}
                 height={{ mobile: 12, desktop: 24 }}
