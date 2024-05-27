@@ -1,50 +1,44 @@
+import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import Image from "next/image";
 import styles from "./card.module.scss";
 import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 
 interface CardProps {
-  headerText: string;
-  contentText: string;
-  learnMoreUrl: string;
-  variant: "ocean" | "teal";
-  imageSrc: string;
+  src: string;
+  alt: string;
+  heading: string;
+  variant: "softTeal" | "azureBlue" | "plum" | "tropicalCyan";
 }
 
-export function Card({
-  headerText,
-  contentText,
-  learnMoreUrl,
-  variant,
-  imageSrc,
-}: CardProps) {
-  const containerClasses = clsx(
-    styles.container,
-    styles[`background-${variant}`],
-  );
-  const learnMoreClasses = clsx(styles.learnMore, styles[`color-${variant}`]);
+export function Card({ src, alt, heading, variant }: CardProps) {
+  const containerClasses = clsx(styles.container, styles[variant]);
 
   return (
     <div className={containerClasses}>
-      <div className={styles.imageContainer}>
-        <Image alt={headerText} src={imageSrc} width={202} height={151} />
-      </div>
-      <div className={styles.textContainer}>
-        <div>
-          <h3 className={styles.heading}>{headerText}</h3>
+      <Image
+        src={src}
+        width={250}
+        height={190}
+        alt={alt}
+        className={styles.image}
+      />
+      <div className={styles.wrapper}>
+        <div className={styles.textWrapper}>
+          <h3 className={styles.title}>{heading}</h3>
         </div>
-        <div>
-          <p className={styles.text}>{contentText}</p>
-        </div>
-        <Link className={learnMoreClasses} href={learnMoreUrl}>
-          <span>Dowiedz się więcej</span>
-          <ResponsiveImage
-            src="/assets/arrow-right.svg"
-            alt="strzałka w prawo"
-            width={{ mobile: 12, desktop: 24 }}
-            height={{ mobile: 12, desktop: 24 }}
-          />
+        <Link href="/#" className={styles.link}>
+          <div className={styles.learnMore}>
+            <p>Dowiedz się więcej</p>
+            {src ? (
+              <ResponsiveImage
+                src="/assets/arrow-right.svg"
+                alt="strzałka w prawo"
+                width={{ mobile: 12, desktop: 24 }}
+                height={{ mobile: 12, desktop: 24 }}
+              />
+            ) : null}
+          </div>
         </Link>
       </div>
     </div>
