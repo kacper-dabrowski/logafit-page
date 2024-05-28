@@ -1,0 +1,15 @@
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pinsWrapper {
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,38 @@
+@import "../../../shared/styles/variables/breakpoints.scss";
+
 .secondary {
   line-height: 60px;
   font-weight: 600;
   font-size: 24px;
+}
+
+.gradientHeading {
+  --color-primary: transparent;
+  --color-secondary: transparent;
+
+  display: block;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 25px 0;
+  font-weight: 600;
+  text-align: center;
+
+  @media (min-width: $screen-lg) {
+    text-align: left;
+  }
+
+  &.green {
+    --color-primary: #8ece42;
+    --color-secondary: #8fe2d2;
+  }
+
+  &.blue {
+    --color-primary: #19437b;
+    --color-secondary: #0193da;
+  }
 }
