@@ -41,6 +41,12 @@
     --gradient-radius: 90deg;
   }
 
+  &.skyBlueVariant {
+    --color-primary: #3296e4;
+    --color-secondary: #a6e2ff;
+    --gradient-radius: 95deg;
+  }
+
   &.active {
     background: linear-gradient(
       var(--gradient-radius),

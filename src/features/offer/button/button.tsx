@@ -4,7 +4,7 @@ import styles from "./button.module.scss";
 
 interface ButtonProps extends React.PropsWithChildren {
   active?: boolean;
-  variant: "green" | "blue" | "lime";
+  variant: "green" | "blue" | "lime" | "skyBlue";
   onClick: React.MouseEventHandler;
 }
 

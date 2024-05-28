@@ -4,7 +4,7 @@ import clsx from "clsx";
 import styles from "./card.module.scss";
 import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 
-interface CardProps {
+export interface CardProps {
   src: string;
   alt: string;
   heading: string;

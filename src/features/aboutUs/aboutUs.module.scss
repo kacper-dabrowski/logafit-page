@@ -37,3 +37,10 @@
   line-height: 16px;
   font-size: 10px;
 }
+
+.contactDataContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
