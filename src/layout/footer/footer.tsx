@@ -6,7 +6,7 @@ import styles from "./footer.module.scss";
 export function Footer() {
   return (
     <div className={styles.footer}>
-      <SecondaryHeader>Kontakt</SecondaryHeader>
+      <SecondaryHeader id="kontakt">Kontakt</SecondaryHeader>
       <ContactInfo />
       <div className={styles.iconsWrapper}>
         <InfoIcon

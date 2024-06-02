@@ -9,7 +9,7 @@ import styles from "./events.module.scss";
 export function Events() {
   return (
     <div className={styles.wrapper}>
-      <SecondaryHeader>Wydarzenia</SecondaryHeader>
+      <SecondaryHeader id="wydarzenia">Wydarzenia</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton variant="blue" active onClick={() => {}}>
           Obozy i kolonie

@@ -1,9 +1,32 @@
+@import "../../../shared/styles/variables/breakpoints.scss";
+
 .infoIcon {
-  display: flex;
+  display: grid;
+  grid-template-columns: 12px 1fr;
   gap: 5px;
   font-size: 9px;
   line-height: 16px;
   font-weight: 500;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 24px 1fr;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    gap: 15px;
+  }
+}
+
+.image {
+  width: 12px;
+  height: 12px;
+
+  @media (min-width: $screen-lg) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .link {

@@ -11,6 +11,7 @@ export function Header() {
           width={1000}
           height={500}
           alt="nagłówek"
+          priority
         />
       </div>
       <div className={styles.headerMobile}>
@@ -20,6 +21,7 @@ export function Header() {
           width={768}
           height={500}
           alt="nagłówek mobilny"
+          priority
         />
       </div>
     </div>

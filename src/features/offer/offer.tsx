@@ -57,7 +57,7 @@ export function Offer() {
 
   return (
     <div>
-      <SecondaryHeader>Oferta</SecondaryHeader>
+      <SecondaryHeader id="oferta">Oferta</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton
           variant="green"
