@@ -8,7 +8,7 @@ export function AboutUs() {
   return (
     <div className={styles.container}>
       <div className={styles.background} />
-      <SecondaryHeader>O nas</SecondaryHeader>
+      <SecondaryHeader id="o-nas">O nas</SecondaryHeader>
       <div className={styles.wrapper}>
         <Image
           src="/assets/about-us-logo.svg"

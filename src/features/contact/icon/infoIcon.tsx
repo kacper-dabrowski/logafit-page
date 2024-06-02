@@ -1,4 +1,5 @@
-import Image from "next/image";
+import clsx from "clsx";
+import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 import styles from "./infoIcon.module.scss";
 
 export enum LinkTarget {
@@ -21,17 +22,25 @@ export function InfoIcon({
   href,
   target = LinkTarget.Current,
 }: InfoIconProps) {
+  const iconClasses = clsx(styles.image);
   return (
-    <div className={styles.infoIcon}>
-      <Image src={imgSrc} width={12} height={12} alt={imgAlt} />
-      <a
-        className={styles.link}
-        href={href}
-        target={target === LinkTarget.BlankPage ? "_blank" : undefined}
-        rel="noreferrer"
-      >
+    <a
+      className={styles.link}
+      href={href}
+      target={target === LinkTarget.BlankPage ? "_blank" : undefined}
+      rel="noreferrer"
+    >
+      <div className={styles.infoIcon}>
+        <ResponsiveImage
+          src={imgSrc}
+          width={{ mobile: 12, desktop: 24 }}
+          height={{ mobile: 12, desktop: 24 }}
+          mobileClassNames={iconClasses}
+          desktopClassNames={iconClasses}
+          alt={imgAlt}
+        />
         {content}
-      </a>
-    </div>
+      </div>
+    </a>
   );
 }

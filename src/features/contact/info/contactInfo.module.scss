@@ -1,7 +1,15 @@
+@import "../../../shared/styles/variables/breakpoints.scss";
+
 .text {
   line-height: 16px;
   font-size: 9px;
   font-weight: 500;
+
+  @media (min-width: $screen-lg) {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
 }
 
 .container {
