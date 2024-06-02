@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { GradientHeader, SecondaryHeader } from "../shared/components/headers";
 import styles from "./aboutUs.module.scss";
 import { Locations } from "./locations/locations";
@@ -46,24 +47,30 @@ export function AboutUs() {
           Zarejestruj się na naukę pływania
         </GradientHeader>
         <div className={styles.contactDataContainer}>
-          <Image
-            src="/assets/sign-phone.png"
-            width={345}
-            height={140}
-            alt="607880086"
-          />
-          <Image
-            src="/assets/sign-mail.png"
-            width={345}
-            height={140}
-            alt="biuro@logafit.pl"
-          />
-          <Image
-            src="/assets/sign-form.png"
-            width={345}
-            height={140}
-            alt="zapisz się przez formularz"
-          />
+          <a href="tel:607880086">
+            <Image
+              src="/assets/sign-phone.png"
+              width={345}
+              height={140}
+              alt="607880086"
+            />
+          </a>
+          <a href="mailto:biuro@logafit.pl">
+            <Image
+              src="/assets/sign-mail.png"
+              width={345}
+              height={140}
+              alt="biuro@logafit.pl"
+            />
+          </a>
+          <Link href="/zapisz-sie">
+            <Image
+              src="/assets/sign-form.png"
+              width={345}
+              height={140}
+              alt="zapisz się przez formularz"
+            />
+          </Link>
         </div>
         <div>
           <Locations />
