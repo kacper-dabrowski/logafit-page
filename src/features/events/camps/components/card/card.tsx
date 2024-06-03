@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import styles from "./card.module.scss";
 
@@ -21,6 +22,10 @@ export function EventCard({
   imageAlt,
   imageSrc,
 }: EventCardProps) {
+  const containerClasses = clsx(styles.card, {
+    [styles.blue]: type === "winter",
+    [styles.yellow]: type === "summer",
+  });
   const iconSrc =
     type === "winter"
       ? "/assets/cold-weather-icon.svg"
@@ -30,11 +35,11 @@ export function EventCard({
   const badgeTitle = type === "winter" ? "Zima 2024" : "Lato 2024";
 
   return (
-    <div className={styles.card}>
+    <div className={containerClasses}>
       <div className={styles.topSection}>
         <h3 className={styles.heading}>{title}</h3>
         <div className={styles.badge}>
-          <Image src={iconSrc} alt={iconAlt} width={12} height={12} />
+          <Image src={iconSrc} alt={iconAlt} width={16} height={16} />
           {badgeTitle}
         </div>
       </div>
@@ -71,7 +76,13 @@ export function EventCard({
           </div>
         </div>
         <div>
-          <Image src={imageSrc} width={202} height={150} alt={imageAlt} />
+          <Image
+            className={styles.image}
+            src={imageSrc}
+            width={202}
+            height={150}
+            alt={imageAlt}
+          />
         </div>
       </div>
     </div>
