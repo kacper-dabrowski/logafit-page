@@ -1,17 +1,36 @@
 @import "../../../../../shared/styles/variables/breakpoints.scss";
 
+@mixin card-colors($background-color, $text-color, $badge-background-color) {
+  background-color: $background-color;
+  color: $text-color;
+
+  .badge {
+    background-color: $badge-background-color;
+  }
+}
+
 .card {
   min-width: 420px;
   margin-top: 25px;
-  background-color: #ecf5fa;
   padding: 15px 20px;
   border-radius: 28px;
+
+  &.blue {
+    @include card-colors(#ecf5fa, #3375b2, #d7e9f4);
+  }
+
+  &.yellow {
+    @include card-colors(#fff7e6, #f9a825, #ffebc7);
+  }
 }
 
 .heading {
-  color: #3375b2;
   font-size: 12px;
   font-weight: bold;
+
+  @media (min-width: $screen-lg) {
+    font-size: 16px;
+  }
 }
 
 .topSection {
@@ -24,15 +43,17 @@
 
 .badge {
   font-size: 9px;
-  background-color: #d7e9f4;
   padding: 8px;
   border-radius: 28px;
-  color: #3375b2;
   font-weight: 600;
   display: flex;
   place-items: center;
   gap: 5px;
   line-height: 12px;
+
+  @media (min-width: $screen-lg) {
+    font-size: 12px;
+  }
 }
 
 .bottomSection {
@@ -42,7 +63,6 @@
 
 .textWrapper {
   font-size: 9px;
-  color: #3375b2;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -58,4 +78,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.image {
+  border-radius: 10px;
 }
