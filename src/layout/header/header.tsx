@@ -8,18 +8,20 @@ export function Header() {
         <div className={styles.background} />
         <Image
           src="/assets/header.png"
-          width={1000}
+          width={936}
           height={500}
           alt="nagłówek"
+          quality={100}
           priority
         />
       </div>
       <div className={styles.headerMobile}>
         <div className={styles.background} />
         <Image
-          src="/assets/header-mobile.png"
-          width={768}
+          src="/assets/header_mobile.png"
+          width={774}
           height={500}
+          quality={100}
           alt="nagłówek mobilny"
           priority
         />
