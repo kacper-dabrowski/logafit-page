@@ -1,4 +1,4 @@
-@import "../../../shared/styles/variables/breakpoints.scss";
+@import "../../../../shared/styles/variables/breakpoints.scss";
 
 .button {
   border: 0;
@@ -12,7 +12,7 @@
   align-items: center;
   gap: 8px;
   height: 32px;
-  cursor:pointer;
+  cursor: pointer;
 
   @media (min-width: $screen-lg) {
     padding: 8px 24px;

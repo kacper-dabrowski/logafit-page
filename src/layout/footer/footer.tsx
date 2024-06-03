@@ -1,6 +1,6 @@
 import { ContactInfo } from "../../features/contact/info/contactInfo";
 import { InfoIcon, LinkTarget } from "../../features/contact/icon/infoIcon";
-import { SecondaryHeader } from "../../features/shared/components/headers";
+import { SecondaryHeader } from "../../features/shared/typography/headers";
 import styles from "./footer.module.scss";
 
 export function Footer() {

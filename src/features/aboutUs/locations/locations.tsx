@@ -2,7 +2,7 @@
 
 import { useNavigation } from "../../navigation/useNavigation";
 import { OfferButton } from "../../offer/button/button";
-import { GradientHeader } from "../../shared/components/headers";
+import { GradientHeader } from "../../shared/typography/headers";
 import { LocationPin, LocationPinProps } from "./locationPin/locationPin";
 import styles from "./locations.module.scss";
 import { Tab } from "./tab";
