@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 import styles from "./eventSwitch.module.scss";
+import { ResponsiveImage } from "../../../shared/responsiveImage/responsiveImage";
 
 interface EventSwitchProps {
   variant: "yellow" | "purple";

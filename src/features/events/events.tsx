@@ -1,38 +1,36 @@
 "use client";
 
-import { SecondaryHeader } from "@/features/shared/components/headers";
+import { SecondaryHeader } from "@/features/shared/typography/headers";
+import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "../offer/button/button";
-import { EventCard } from "./card/card";
-import { EventSwitch } from "./eventSwitch/eventSwitch";
+import { Camps } from "./camps/camps";
 import styles from "./events.module.scss";
+import { Tab } from "./tab";
+import { Courses } from "./courses/courses";
+
+const eventPages: Record<Tab, JSX.Element> = {
+  [Tab.Camps]: <Camps />,
+  [Tab.Courses]: <Courses />,
+  [Tab.HealthResorts]: <div />,
+};
 
 export function Events() {
+  const { getNavigationProps, activeTab } = useNavigation(Tab.Camps);
   return (
     <div className={styles.wrapper}>
       <SecondaryHeader id="wydarzenia">Wydarzenia</SecondaryHeader>
       <div className={styles.buttonsWrapper}>
-        <OfferButton variant="blue" active onClick={() => {}}>
+        <OfferButton variant="blue" {...getNavigationProps(Tab.Camps)}>
           Obozy i kolonie
         </OfferButton>
-        <OfferButton variant="green" onClick={() => {}}>
+        <OfferButton variant="green" {...getNavigationProps(Tab.Courses)}>
           Kursy i szkolenia
         </OfferButton>
-        <OfferButton variant="lime" onClick={() => {}}>
+        <OfferButton variant="lime" {...getNavigationProps(Tab.HealthResorts)}>
           Turnusy zdrowotne
         </OfferButton>
       </div>
-      <div className={styles.cardWrapper}>
-        <EventCard />
-      </div>
-      <div className={styles.switchesWrapper}>
-        <EventSwitch
-          variant="yellow"
-          iconSrc="/assets/sun-icon.svg"
-          iconAltText="słońce"
-        >
-          Wydarzenia letnie
-        </EventSwitch>
-      </div>
+      {eventPages[activeTab]}
     </div>
   );
 }

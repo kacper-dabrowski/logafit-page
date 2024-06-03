@@ -1,21 +1,24 @@
 "use client";
 
-import { SecondaryHeader } from "@/features/shared/components/headers";
+import { SecondaryHeader } from "@/features/shared/typography/headers";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
-import { Card, CardProps } from "./card/card";
+
 import styles from "./offer.module.scss";
 import { Tab } from "./tab";
+import { CardWithImage, CardWithImageProps } from "../shared/card/card";
 
-const cards: Record<Tab, CardProps[]> = {
+const cards: Record<Tab, CardWithImageProps[]> = {
   [Tab.SwimmingSchool]: [
     {
+      href: "/dowiedz-sie-wiecej/plywanie-dla-niemowlat",
       variant: "azureBlue",
       src: "/assets/plywanie_dla_niemowlat.png",
       alt: "pływanie dla niemowląt",
       heading: "Pływanie dla niemowląt",
     },
     {
+      href: "/dowiedz-sie-wiecej/plywanie-dla-dzieci",
       variant: "plum",
       src: "/assets/plywanie_dla_dzieci.png",
       alt: "pływanie dla dzieci",
@@ -24,12 +27,14 @@ const cards: Record<Tab, CardProps[]> = {
   ],
   [Tab.PhysicalTherapy]: [
     {
+      href: "/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
       variant: "softTeal",
       src: "/assets/couple-relaxing.png",
       alt: "rehabilitacja w wodzie",
       heading: "Rehabilitacja w wodzie",
     },
     {
+      href: "/dowiedz-sie-wiecej/plywanie-korekcyjne",
       variant: "tropicalCyan",
       src: "/assets/baby-swimming.png",
       alt: "pływanie korekcyjne",
@@ -38,6 +43,7 @@ const cards: Record<Tab, CardProps[]> = {
   ],
   [Tab.AquaFitness]: [
     {
+      href: "/dowiedz-sie-wiecej/aqua-fitness",
       variant: "sunsetHorizon",
       src: "/assets/aqua-fitness.png",
       alt: "aqua fitness",
@@ -78,7 +84,7 @@ export function Offer() {
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
       <div className={styles.cardsWrapper}>
         {cards[activeTab].map((props) => (
-          <Card {...props} key={props.heading} />
+          <CardWithImage {...props} key={props.heading} />
         ))}
       </div>
     </div>

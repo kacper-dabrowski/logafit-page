@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GradientHeader, SecondaryHeader } from "../shared/components/headers";
+import { GradientHeader, SecondaryHeader } from "../shared/typography/headers";
 import styles from "./aboutUs.module.scss";
 import { Locations } from "./locations/locations";
 

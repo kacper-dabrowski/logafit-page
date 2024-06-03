@@ -6,12 +6,14 @@
   grid-template-rows: none;
   min-width: 300px;
 
-  @media (min-width: $screen-lg) {
-    min-width: 400px;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: none;
-    min-height: unset;
+  &.withImage {
+    @media (min-width: $screen-lg) {
+      min-width: 400px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: none;
+      min-height: unset;
+    }
   }
 
   --bg-primary: transparent;
@@ -45,6 +47,21 @@
 
   &.sunsetHorizon {
     background: linear-gradient(110deg, #45a8f9 0%, #ff919f 48%, #ffcd7c 100%);
+  }
+
+  &.beachSand {
+    --bg-primary: #ffa012;
+    --bg-secondary: #dce015;
+  }
+
+  &.blueGreen {
+    --bg-primary: #a7c822;
+    --bg-secondary: #048bcc;
+  }
+
+  &.turquoisePurple {
+    --bg-primary: #3bc4bc;
+    --bg-secondary: #864ee2;
   }
 }
 
@@ -82,14 +99,6 @@
   @media (min-width: $screen-lg) {
     justify-content: center;
   }
-}
-
-.link {
-  color: black;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: center;
 }
 
 .image {
