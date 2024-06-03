@@ -23,22 +23,15 @@ export function Events() {
       </div>
       <div className={styles.cardWrapper}>
         <EventCard />
-        <div className={styles.switchesWrapper}>
-          <EventSwitch
-            variant="yellow"
-            iconSrc="/assets/sun-icon.svg"
-            iconAltText="słońce"
-          >
-            Wydarzenia letnie
-          </EventSwitch>
-          <EventSwitch
-            variant="purple"
-            iconSrc="/assets/archive-icon.svg"
-            iconAltText="archiwum"
-          >
-            Archiwum wydarzeń
-          </EventSwitch>
-        </div>
+      </div>
+      <div className={styles.switchesWrapper}>
+        <EventSwitch
+          variant="yellow"
+          iconSrc="/assets/sun-icon.svg"
+          iconAltText="słońce"
+        >
+          Wydarzenia letnie
+        </EventSwitch>
       </div>
     </div>
   );

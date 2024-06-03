@@ -1,15 +1,15 @@
 @import "../../../shared/styles/variables/breakpoints.scss";
 
 .card {
-  width: 420px;
+  min-width: 420px;
   margin-top: 25px;
-  background-color: #eeecfa;
+  background-color: #ECF5FA;
   padding: 15px 20px;
   border-radius: 28px;
 }
 
 .heading {
-  color: #4433b2;
+  color: #3375B2;
   font-size: 12px;
   font-weight: bold;
 }
@@ -24,10 +24,10 @@
 
 .badge {
   font-size: 9px;
-  background-color: #dbd7f4;
+  background-color: #D7E9F4;
   padding: 8px;
   border-radius: 28px;
-  color: #4433b2;
+  color: #3375B2;
   font-weight: 600;
   display: flex;
   place-items: center;
@@ -42,7 +42,7 @@
 
 .textWrapper {
   font-size: 9px;
-  color: #4433b2;
+  color: #3375B2;
   display: flex;
   flex-direction: column;
   gap: 20px;
