@@ -16,6 +16,7 @@ const eventPages: Record<Tab, JSX.Element> = {
 
 export function Events() {
   const { getNavigationProps, activeTab } = useNavigation(Tab.Camps);
+
   return (
     <div className={styles.wrapper}>
       <SecondaryHeader id="wydarzenia">Wydarzenia</SecondaryHeader>

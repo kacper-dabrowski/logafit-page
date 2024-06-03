@@ -1,4 +1,4 @@
-@import "../../../../shared/styles/variables/breakpoints.scss";
+@import "../../../../../shared/styles/variables/breakpoints.scss";
 
 .button {
   border: 0;
@@ -29,9 +29,10 @@
     --color-text: #7e6407;
   }
 
-  &.purple {
-    --color-background: #4433b2;
-    --color-text: #dbd7f4;
+
+  &.blue{
+    --color-background:#34AFF4;
+    --color-text: #075987;
   }
 
   background-color: var(--color-background);

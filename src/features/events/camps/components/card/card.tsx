@@ -1,19 +1,41 @@
 import Image from "next/image";
 import styles from "./card.module.scss";
 
-export function EventCard() {
+interface EventCardProps {
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  renderDates: () => JSX.Element;
+  renderLocation: () => JSX.Element;
+  renderAge: () => JSX.Element;
+
+  type: "winter" | "summer";
+}
+
+export function EventCard({
+  type,
+  title,
+  renderAge,
+  renderDates,
+  renderLocation,
+  imageAlt,
+  imageSrc,
+}: EventCardProps) {
+  const iconSrc =
+    type === "winter"
+      ? "/assets/cold-weather-icon.svg"
+      : "/assets/sun-icon.svg";
+
+  const iconAlt = type === "winter" ? "śniezynka" : "słoneczko";
+  const badgeTitle = type === "winter" ? "Zima 2024" : "Lato 2024";
+
   return (
     <div className={styles.card}>
       <div className={styles.topSection}>
-        <h3 className={styles.heading}>Zimowisko - Czarna Góra</h3>
+        <h3 className={styles.heading}>{title}</h3>
         <div className={styles.badge}>
-          <Image
-            src="/assets/cold-weather-icon.svg"
-            alt="śniezynka"
-            width={12}
-            height={12}
-          />
-          Zima 2024
+          <Image src={iconSrc} alt={iconAlt} width={12} height={12} />
+          {badgeTitle}
         </div>
       </div>
       <div className={styles.bottomSection}>
@@ -26,11 +48,7 @@ export function EventCard() {
                 height={16}
                 alt="ikona kalendarza"
               />
-              <p>
-                I - 10-16.02.2024
-                <br />
-                II - 17-23.02.2024
-              </p>
+              {renderDates()}
             </div>
             <div className={styles.textWithIcon}>
               <Image
@@ -39,7 +57,7 @@ export function EventCard() {
                 height={16}
                 alt="ikona pinezki"
               />
-              <p>🇵🇱 Czarna Góra, Region Masyw Śnieżnika</p>
+              {renderLocation()}
             </div>
             <div className={styles.textWithIcon}>
               <Image
@@ -48,19 +66,12 @@ export function EventCard() {
                 height={16}
                 alt="grupa ludzi"
               />
-              <p>
-                dzieci i młodzież <br /> w wieku 7 – 16 lat
-              </p>
+              {renderAge()}
             </div>
           </div>
         </div>
         <div>
-          <Image
-            src="/assets/events-camp-photo.png"
-            width={202}
-            height={150}
-            alt="dzieci na stoku narciarskim"
-          />
+          <Image src={imageSrc} width={202} height={150} alt={imageAlt} />
         </div>
       </div>
     </div>
