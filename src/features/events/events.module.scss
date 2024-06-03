@@ -22,20 +22,20 @@
 
 .cardWrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-bottom: 15px;
+  flex-grow: 1;
 
   @media (min-width: $screen-lg) {
     margin: 0 auto;
     padding-bottom: 30px;
-    width: 60%;
   }
 }
 
 .switchesWrapper {
   display: flex;
-  gap: 30px;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  padding:  30px 0;
+
 }

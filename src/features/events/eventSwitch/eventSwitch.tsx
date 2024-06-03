@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image from "next/image";
+import { ResponsiveImage } from "../../shared/responsiveImage/responsiveImage";
 import styles from "./eventSwitch.module.scss";
 
 interface EventSwitchProps {
@@ -15,11 +15,19 @@ export function EventSwitch({
   children,
   iconAltText,
 }: EventSwitchProps) {
-  const classes = clsx(styles.button, { [styles[variant]]: true });
+  const containerClasses = clsx(styles.button, { [styles[variant]]: true });
+  const imageClasses = clsx(styles.icon);
 
   return (
-    <button className={classes} type="button">
-      <Image src={iconSrc} width={12} height={12} alt={iconAltText} />
+    <button className={containerClasses} type="button">
+      <ResponsiveImage
+        src={iconSrc}
+        width={{ mobile: 12, desktop: 24 }}
+        height={{ mobile: 12, desktop: 24 }}
+        alt={iconAltText}
+        mobileClassNames={imageClasses}
+        desktopClassNames={imageClasses}
+      />
       <div>{children}</div>
     </button>
   );
