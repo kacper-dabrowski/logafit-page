@@ -1,20 +1,14 @@
 @import "../../shared/styles/variables/breakpoints.scss";
+@import "../../shared/styles/background.scss";
 
 .container {
   position: relative;
   padding: 15px;
 }
 
-.background {
-  background: linear-gradient(180deg, #ddeed8 0%, #f6fbf2 37.37%);
-  position: absolute;
-  z-index: -1;
-  width: 110vw;
-  height: 100%;
-  transform: translate(-50%, 0);
-  left: 50%;
-  top: 0;
-}
+@include gradient-background(linear-gradient(180deg, #ddeed8 0%, #f6fbf2 37.37%));
+
+
 
 .wrapper {
   display: flex;
