@@ -6,9 +6,9 @@
   padding: 15px;
 }
 
-@include gradient-background(linear-gradient(180deg, #ddeed8 0%, #f6fbf2 37.37%));
-
-
+@include gradient-background(
+  linear-gradient(180deg, #ddeed8 0%, #f6fbf2 37.37%)
+);
 
 .wrapper {
   display: flex;

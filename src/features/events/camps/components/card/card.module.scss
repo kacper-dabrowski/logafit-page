@@ -22,6 +22,10 @@
   &.yellow {
     @include card-colors(#fff7e6, #f9a825, #ffebc7);
   }
+
+  &.lemonchiffon {
+    @include card-colors(#fefadc, #7e6407, #f0e68c);
+  }
 }
 
 .heading {
@@ -84,8 +88,8 @@
   border-radius: 10px;
 }
 
-.imageWrapper{
-  display:flex;
+.imageWrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
 }

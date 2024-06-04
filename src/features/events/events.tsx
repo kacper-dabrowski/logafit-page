@@ -7,11 +7,12 @@ import { Camps } from "./camps/camps";
 import styles from "./events.module.scss";
 import { Tab } from "./tab";
 import { Courses } from "./courses/courses";
+import { HealthTours } from "./healthTours/healthTours";
 
 const eventPages: Record<Tab, JSX.Element> = {
   [Tab.Camps]: <Camps />,
   [Tab.Courses]: <Courses />,
-  [Tab.HealthResorts]: <div />,
+  [Tab.HealthTours]: <HealthTours />,
 };
 
 export function Events() {
@@ -27,7 +28,7 @@ export function Events() {
         <OfferButton variant="green" {...getNavigationProps(Tab.Courses)}>
           Kursy i szkolenia
         </OfferButton>
-        <OfferButton variant="lime" {...getNavigationProps(Tab.HealthResorts)}>
+        <OfferButton variant="lime" {...getNavigationProps(Tab.HealthTours)}>
           Turnusy zdrowotne
         </OfferButton>
       </div>

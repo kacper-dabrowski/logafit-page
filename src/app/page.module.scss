@@ -1,7 +1,8 @@
-@import '../shared/styles/background.scss';
+@import "../shared/styles/background.scss";
 
-  @include gradient-background(linear-gradient(180deg, #f6fbf2 0%, #e2dff6 50.5%, #dfeef6 100%));
-
+@include gradient-background(
+  linear-gradient(180deg, #f6fbf2 0%, #e2dff6 50.5%, #dfeef6 100%)
+);
 
 .mainWrapper {
   position: relative;
