@@ -75,7 +75,7 @@ export function EventCard({
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.imageWrapper}>
           <Image
             className={styles.image}
             src={imageSrc}
