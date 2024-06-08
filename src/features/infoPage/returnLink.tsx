@@ -3,10 +3,15 @@ import clsx from "clsx";
 import { ResponsiveImage } from "../shared/responsiveImage/responsiveImage";
 import styles from "./returnLink.module.scss";
 
-export function ReturnLink() {
+interface ReturnLinkProps {
+  className?: string;
+}
+
+export function ReturnLink({ className }: ReturnLinkProps) {
   const arrowClasses = clsx(styles.arrow);
+
   return (
-    <Link href="/" className={styles.container}>
+    <Link href="/" className={clsx(styles.container, className)}>
       <ResponsiveImage
         src="/assets/arrow-right.svg"
         alt="strzałka w prawo"
