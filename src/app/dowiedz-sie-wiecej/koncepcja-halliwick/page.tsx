@@ -45,9 +45,11 @@ export default function Page() {
             />
           </div>
         </div>
-        <div className={clsx(styles.priceContainer, styles.withMargin)}>
+        <div className={clsx(styles.priceContainer)}>
           <div>
-            <h2 className={styles.header}>Udział w kursie</h2>
+            <h2 className={clsx(styles.header, styles.withMargin)}>
+              Udział w kursie
+            </h2>
             <p className={styles.text}>
               Kurs przeznaczony jest dla fizjoterapeutów (mgr, licencjat),
               nauczycieli wychowania fizycznego, instruktorów pływania,
