@@ -1,17 +1,25 @@
 @import "../../../shared/styles/variables/breakpoints.scss";
-@import '../../../shared/styles/background.scss';
+@import "../../../shared/styles/background.scss";
 
-
-@include gradient-background(linear-gradient(180deg, #F6FBF2 0%, rgba(246, 251, 242, 0.00) 100%));
+@include gradient-background(
+  linear-gradient(180deg, #f6fbf2 0%, rgba(246, 251, 242, 0) 100%)
+);
 
 .header {
   color: #2f4777;
   text-align: center;
   font-weight: 500;
 }
-.container{
+
+.container {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
+
 .mainHeader {
   margin: 30px auto;
 }
@@ -25,12 +33,11 @@
 }
 
 .text {
-  font-size: 12px;
+  font-size: 18px;
+  max-width: 500px;
 
   @media (min-width: $screen-lg) {
-    max-width: 500px;
     line-height: 24px;
-    font-size: 18px;
   }
 }
 
@@ -43,7 +50,6 @@
     justify-items: center;
   }
 }
-
 
 .descriptionContainer {
   @media (min-width: $screen-lg) {
@@ -70,10 +76,7 @@
   text-align: center;
   margin: auto;
   margin-top: 20px;
-
-  @media (min-width: $screen-lg) {
-    font-size: 32px;
-  }
+  font-size: 32px;
 }
 
 .priceWrapper {
@@ -81,15 +84,15 @@
   flex-direction: column;
   margin: 20px auto;
 
-  @media (min-width:$screen-lg) {
-    margin: 0 auto 15px auto;
+  @media (min-width: $screen-lg) {
+    margin: 0 auto 15px;
   }
 }
 
 .buttonsWrapper {
   display: flex;
   gap: 15px;
-  margin-top:20px;
+  margin-top: 20px;
 
   @media (min-width: $screen-lg) {
     margin-top: 60px;

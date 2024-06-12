@@ -3,7 +3,7 @@
 
 .container {
   position: relative;
-  padding: 15px;
+  padding: 0 15px 15px;
 }
 
 @include gradient-background(
