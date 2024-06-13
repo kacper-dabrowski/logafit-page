@@ -19,7 +19,7 @@ export function TextWithImage({
   imageProps,
 }: TextWithImageProps) {
   return (
-    <div className={clsx(styles.container, containerClasses)}>
+    <div className={clsx(containerClasses, styles.container)}>
       <div>{children}</div>
       <Image className={styles.image} {...imageProps} />
     </div>
