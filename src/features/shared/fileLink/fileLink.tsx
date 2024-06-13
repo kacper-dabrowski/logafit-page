@@ -3,15 +3,15 @@ import { PropsWithChildren } from "react";
 import styles from "./fileLink.module.scss";
 
 interface FileLinkProps {
-  fileHref: string;
+  fileName: string;
 }
 
 export function FileLink({
-  fileHref,
+  fileName,
   children,
 }: PropsWithChildren<FileLinkProps>) {
   return (
-    <Link href={fileHref}>
+    <Link href={`/static/${fileName}`}>
       <button className={styles.fileLink} type="button">
         {children}
       </button>

@@ -29,16 +29,8 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px;
   max-width: 500px;
-}
-
-.image {
-  @media (min-width: $screen-lg) {
-    display: block;
-  }
-
-  display: none;
 }
 
 .list {
@@ -69,6 +61,7 @@
 .topWrapper {
   @media (min-width: $screen-lg) {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   display: flex;
