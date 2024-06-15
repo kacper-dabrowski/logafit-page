@@ -1,3 +1,4 @@
+import { List } from "../../../features/infoPage/list";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
 import { FileLink } from "../../../features/shared/fileLink/fileLink";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
@@ -15,7 +16,7 @@ export default function Page() {
     <div className={styles.page}>
       <h2 className={styles.heading}>Pływanie dla niemowląt</h2>
       <div>
-        <TextWithImage imageProps={imageProps}>
+        <TextWithImage centered imageProps={imageProps}>
           <div>
             <Paragraph>
               Pływanie niemowląt polega na wspomaganiu naturalnego rozwoju
@@ -27,17 +28,14 @@ export default function Page() {
                 Zajęcia w wodzie to wszechstronna gimnastyka zawierająca w sobie
                 elementy:
               </Paragraph>
-              <ul className={styles.list}>
-                <li className={styles.listItem}>masażu</li>
-                <li className={styles.listItem}>
-                  zrównoważenia napięcia mięśniowego
-                </li>
-                <li className={styles.listItem}>poprawy czucia głębokiego</li>
-                <li className={styles.listItem}>poprawy czucia głębokiego</li>
-                <li className={styles.listItem}>
-                  stymulacji sensorycznej ćwiczeń oddechowych
-                </li>
-              </ul>
+              <List
+                items={[
+                  "masażu",
+                  "zrównoważenia napięcia mięśniowego",
+                  "poprawy czucia głębokiego",
+                  "stymulacji sensorycznej ćwiczeń oddechowych",
+                ]}
+              />
             </div>
           </div>
         </TextWithImage>
@@ -78,19 +76,12 @@ export default function Page() {
             </div>
             <div>
               <h3 className={styles.secondaryHeader}>Cennik</h3>
-              <ul className={styles.list}>
-                <li className={styles.listItem}>
-                  <Paragraph>
-                    Zajęcia grupowe: 10 wejść – 500 zł Realizujemy wyłącznie w
-                    przychodni Zdrowa Rodzina
-                  </Paragraph>
-                </li>
-                <li className={styles.listItem}>
-                  <Paragraph>
-                    Zajęcia indywidualne: 1 wejście – 170 zł️
-                  </Paragraph>
-                </li>
-              </ul>
+              <List
+                items={[
+                  "Zajęcia grupowe: 10 wejść – 500 zł",
+                  "Zajęcia indywidualne: 1 wejście – 170 zł️",
+                ]}
+              />
               <Paragraph className={styles.red}>
                 Realizujemy wyłącznie w przychodni Zdrowa Rodzina
               </Paragraph>
