@@ -15,10 +15,7 @@ export default function Page() {
     <div className={styles.page}>
       <h2 className={styles.heading}>Rehabilitacja w wodzie</h2>
       <div>
-        <TextWithImage
-          imageProps={imageProps}
-          containerClasses={styles.centered}
-        >
+        <TextWithImage imageProps={imageProps} centered>
           <div>
             <Paragraph>
               Proponujemy uzupełnienie rehabilitacji lądowej przy wykorzystaniu

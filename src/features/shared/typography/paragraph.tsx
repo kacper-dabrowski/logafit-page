@@ -9,5 +9,5 @@ export function Paragraph({
   children,
   className,
 }: PropsWithChildren<ParagraphProps>) {
-  return <p className={clsx(styles.text, className)}>{children}</p>;
+  return <p className={clsx(className, styles.text)}>{children}</p>;
 }

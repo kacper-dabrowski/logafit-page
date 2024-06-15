@@ -16,7 +16,7 @@ export default function Page() {
       <div>
         <TextWithImage
           imageProps={imageProps}
-          containerClasses={styles.container}
+          containerCustomClasses={styles.container}
         >
           <div>
             <Paragraph>

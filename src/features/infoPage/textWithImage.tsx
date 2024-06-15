@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./textWithImage.module.scss";
 
 interface TextWithImageProps {
-  containerClasses?: string;
+  containerCustomClasses?: string;
   children: React.ReactNode;
   imageProps: {
     src: string;
@@ -11,15 +11,21 @@ interface TextWithImageProps {
     height: number;
     alt: string;
   };
+  centered?: boolean;
 }
 
 export function TextWithImage({
   children,
-  containerClasses,
+  containerCustomClasses,
   imageProps,
+  centered,
 }: TextWithImageProps) {
+  const containerClasses = clsx(containerCustomClasses, styles.container, {
+    [styles.centered]: centered,
+  });
+
   return (
-    <div className={clsx(containerClasses, styles.container)}>
+    <div className={containerClasses}>
       <div>{children}</div>
       <Image className={styles.image} {...imageProps} />
     </div>
