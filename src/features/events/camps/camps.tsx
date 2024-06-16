@@ -1,4 +1,5 @@
 import { useNavigation } from "../../navigation/useNavigation";
+import { SnowflakeIcon, SunIcon } from "../../shared/icons";
 import styles from "./camps.module.scss";
 import { EventSwitch } from "./components/eventSwitch/eventSwitch";
 import { SummerCamps } from "./summer/summerCamps";
@@ -36,10 +37,12 @@ function getEventSwitchProps(activeTab: Tab) {
   return {
     tab: activeTab === Tab.WinterCamps ? Tab.SummerCamps : Tab.WinterCamps,
     variant,
-    iconSrc:
-      activeTab === Tab.WinterCamps
-        ? "/assets/cold-weather-icon.svg"
-        : "/assets/sun-icon.svg",
+    renderIcon: () =>
+      activeTab === Tab.WinterCamps ? (
+        <SnowflakeIcon color="#4433B2" />
+      ) : (
+        <SunIcon color="#B28F33" />
+      ),
     iconAltText: activeTab === Tab.WinterCamps ? "śnieżynka" : "słońce",
   };
 }

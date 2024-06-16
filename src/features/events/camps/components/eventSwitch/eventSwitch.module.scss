@@ -37,13 +37,3 @@
   background-color: var(--color-background);
   color: var(--color-text);
 }
-
-.icon {
-  width: 12px;
-  height: 12px;
-
-  @media (min-width: $screen-lg) {
-    width: 24px;
-    height: 24px;
-  }
-}
