@@ -1,0 +1,11 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
+.iconContainer {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  @media (min-width: $screen-lg) {
+    width: 24px;
+    height: 24px;
+  }
+}

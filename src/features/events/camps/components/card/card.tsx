@@ -1,6 +1,13 @@
 import clsx from "clsx";
 import Image from "next/image";
 import styles from "./card.module.scss";
+import {
+  UserGroupIcon,
+  CalendarIcon,
+  PinIcon,
+  SnowflakeIcon,
+  SunIcon,
+} from "../../../../shared/icons";
 
 interface EventCardProps {
   title: string;
@@ -26,12 +33,15 @@ export function EventCard({
     [styles.blue]: type === "winter",
     [styles.yellow]: type === "summer",
   });
-  const iconSrc =
-    type === "winter"
-      ? "/assets/cold-weather-icon.svg"
-      : "/assets/sun-icon.svg";
 
-  const iconAlt = type === "winter" ? "śniezynka" : "słoneczko";
+  const color = type === "winter" ? "#4433B2" : "#B28F33";
+  const icon =
+    type === "winter" ? (
+      <SnowflakeIcon color={color} />
+    ) : (
+      <SunIcon color={color} />
+    );
+
   const badgeTitle = type === "winter" ? "Zima 2024" : "Lato 2024";
 
   return (
@@ -39,7 +49,7 @@ export function EventCard({
       <div className={styles.topSection}>
         <h3 className={styles.heading}>{title}</h3>
         <div className={styles.badge}>
-          <Image src={iconSrc} alt={iconAlt} width={16} height={16} />
+          {icon}
           {badgeTitle}
         </div>
       </div>
@@ -47,30 +57,15 @@ export function EventCard({
         <div>
           <div className={styles.textWrapper}>
             <div className={styles.textWithIcon}>
-              <Image
-                src="/assets/calendar-icon.svg"
-                width={16}
-                height={16}
-                alt="ikona kalendarza"
-              />
+              <CalendarIcon color={color} />
               {renderDates()}
             </div>
             <div className={styles.textWithIcon}>
-              <Image
-                src="/assets/pin-icon.svg"
-                width={16}
-                height={16}
-                alt="ikona pinezki"
-              />
+              <PinIcon color={color} />
               {renderLocation()}
             </div>
             <div className={styles.textWithIcon}>
-              <Image
-                src="/assets/group-icon.svg"
-                width={16}
-                height={16}
-                alt="grupa ludzi"
-              />
+              <UserGroupIcon color={color} />
               {renderAge()}
             </div>
           </div>
