@@ -1,0 +1,33 @@
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border-radius: 8px;
+  border: 2px solid #d7dedd;
+  padding: 8px;
+  background: #fff;
+  color: #0d1606;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &::placeholder {
+    color: #9ea3a2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.label {
+  color: #0d1606;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
