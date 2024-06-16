@@ -17,8 +17,14 @@ interface EventCardProps {
   renderLocation: () => JSX.Element;
   renderAge: () => JSX.Element;
 
-  type: "winter" | "summer";
+  type: "winter" | "summer" | "healthTour";
 }
+
+const colorToType: Record<EventCardProps["type"], string> = {
+  winter: "#4433B2",
+  summer: "#B28F33",
+  healthTour: "#7E6407",
+};
 
 export function EventCard({
   type,
@@ -32,9 +38,10 @@ export function EventCard({
   const containerClasses = clsx(styles.card, {
     [styles.blue]: type === "winter",
     [styles.yellow]: type === "summer",
+    [styles.lemonchiffon]: type === "healthTour",
   });
 
-  const color = type === "winter" ? "#4433B2" : "#B28F33";
+  const color = colorToType[type];
   const icon =
     type === "winter" ? (
       <SnowflakeIcon color={color} />
@@ -48,10 +55,12 @@ export function EventCard({
     <div className={containerClasses}>
       <div className={styles.topSection}>
         <h3 className={styles.heading}>{title}</h3>
-        <div className={styles.badge}>
-          {icon}
-          {badgeTitle}
-        </div>
+        {type === "healthTour" ? null : (
+          <div className={styles.badge}>
+            {icon}
+            {badgeTitle}
+          </div>
+        )}
       </div>
       <div className={styles.bottomSection}>
         <div>
