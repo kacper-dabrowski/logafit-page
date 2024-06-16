@@ -5,23 +5,15 @@ export function HealthTours() {
   return (
     <div className={styles.container}>
       <EventCard
-        title="Zimowisko - Czarna Góra"
-        imageSrc="/assets/events-camp-photo.png"
+        title="Turnus Leczniczy"
+        imageSrc="/assets/people-walking.png"
         imageAlt="dzieci na stoku narciarskim"
-        renderDates={() => (
-          <p>
-            I - 10-16.02.2024
-            <br />
-            II - 17-23.02.2024
-          </p>
+        renderDates={() => <p>18-24 września 2023</p>}
+        renderLocation={() => (
+          <p>🇵🇱 Ośrodek Live, Okole pod Starogardem Gdańskim</p>
         )}
-        renderLocation={() => <p>🇵🇱 Czarna Góra, Region Masyw Śnieżnika</p>}
-        renderAge={() => (
-          <p>
-            dzieci i młodzież <br /> w wieku 7 – 16 lat
-          </p>
-        )}
-        type="winter"
+        renderAge={() => <p>Profesjonalna kadra medyczna i terapeutyczna</p>}
+        type="healthTour"
       />
     </div>
   );
