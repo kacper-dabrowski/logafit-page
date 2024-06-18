@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./headers.module.scss";
 
 interface FocusableByLink {
-  id: string;
+  id?: string;
 }
 
 export function SecondaryHeader({

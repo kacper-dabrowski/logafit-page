@@ -1,0 +1,17 @@
+@import "../../shared/styles/variables/breakpoints.scss";
+
+.buttonsWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $screen-lg) {
+    justify-content: initial;
+    align-items: initial;
+  }
+}
+
+.formContainer {
+  margin: 30px;
+}
