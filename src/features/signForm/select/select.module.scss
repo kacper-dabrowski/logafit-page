@@ -4,7 +4,15 @@
   flex-direction: column;
 }
 
-.input {
+.label {
+  color: #0d1606;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.select {
   border-radius: 8px;
   border: 2px solid #d7dedd;
   padding: 8px;
@@ -16,20 +24,4 @@
   font-weight: 500;
   line-height: normal;
   resize: vertical;
-
-  &::placeholder {
-    color: #9ea3a2;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-  }
-}
-
-.label {
-  color: #0d1606;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
