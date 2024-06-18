@@ -30,6 +30,7 @@ export function SwimmingSchoolSignForm() {
         labelText="Rodzaj zajęć"
       />
       <FormTextarea labelText="Treść wiadomości" />
+      <FormInput type="hidden" value="Szkoła pływania" name="typ" />
       <FormButton />
     </SignForm>
   );
