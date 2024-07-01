@@ -10,11 +10,6 @@ export function Courses() {
         variant="turquoisePurple"
       />
       <Card
-        href="/dowiedz-sie-wiecej/watsu-basic"
-        heading="Kurs WATSU® Basic"
-        variant="beachSand"
-      />
-      <Card
         href="/dowiedz-sie-wiecej/aqua-fitness"
         heading="Aqua Fitness"
         variant="blueGreen"
