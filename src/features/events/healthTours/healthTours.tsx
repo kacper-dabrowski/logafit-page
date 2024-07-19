@@ -7,8 +7,8 @@ export function HealthTours() {
       <EventCard
         title="Turnus Leczniczy"
         imageSrc="/assets/people-walking.png"
-        imageAlt="dzieci na stoku narciarskim"
-        renderDates={() => <p>18-24 września 2023</p>}
+        imageAlt="ludzie spacerujący po plaży"
+        renderDates={() => <p>16-22 września 2024</p>}
         renderLocation={() => (
           <p>🇵🇱 Ośrodek Live, Okole pod Starogardem Gdańskim</p>
         )}
