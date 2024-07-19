@@ -4,8 +4,9 @@
   gap: 15px;
   justify-content: center;
   margin-top: 15px;
-  width:100%;
+  width: 100%;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: $screen-lg) {
     justify-content: initial;
@@ -14,7 +15,6 @@
 
   display: flex;
 }
-
 
 .heading {
   display: none;

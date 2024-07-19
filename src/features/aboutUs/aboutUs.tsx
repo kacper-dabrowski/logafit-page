@@ -33,7 +33,11 @@ export function AboutUs() {
           oswajania z wodą, pływania dla najmłodszych, poprzez naukę pływania
           dzieci w wieku przedszkolnym i szkolnym, doskonalenie pływania,
           pływanie korekcyjne, rehabilitację w wodzie, kończąc na pływaniu
-          dorosłych i aqua aerobiku.
+          dorosłych i aqua fitnessie. W Logafit specjalizujemy się w
+          kompleksowej terapii niemowląt, dzieci i młodzieży, z naciskiem na
+          stosowanie nowoczesnych technik osteopatycznych. Misją firmy jest
+          wspieranie zdrowego rozwoju najmłodszych pacjentów poprzez holistyczne
+          podejście do ich zdrowia i dobrostanu.
         </p>
         <Image
           src="/assets/logafit-footer-wave.svg"
@@ -44,9 +48,7 @@ export function AboutUs() {
         />
       </div>
       <div>
-        <GradientHeader variant="green">
-          Zarejestruj się na naukę pływania
-        </GradientHeader>
+        <GradientHeader variant="green">Zarejestruj się</GradientHeader>
         <div className={styles.contactDataContainer}>
           <a href="tel:607880086">
             <Image
