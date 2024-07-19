@@ -38,7 +38,7 @@ export default function Page() {
           variant="blue"
           {...getNavigationProps(Tab.PhysicalTherapy)}
         >
-          Fizjoterapia
+          Osteopatia
         </OfferButton>
         <OfferButton variant="blue" {...getNavigationProps(Tab.DefaultCourse)}>
           Kursy i szkolenia
