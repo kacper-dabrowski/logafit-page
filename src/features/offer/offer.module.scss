@@ -4,6 +4,8 @@
   gap: 15px;
   justify-content: center;
   margin-top: 15px;
+  width:100%;
+  align-items: center;
 
   @media (min-width: $screen-lg) {
     justify-content: initial;
@@ -13,19 +15,6 @@
   display: flex;
 }
 
-.cardsWrapper {
-  margin-top: 25px;
-
-  @media (min-width: $screen-lg) {
-    margin-top: 0;
-    flex-wrap: nowrap;
-  }
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
 
 .heading {
   display: none;

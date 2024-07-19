@@ -4,58 +4,28 @@ import { PrimaryHeader } from "@/features/shared/typography/headers";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
 
+import { Camps } from "../events/camps/camps";
+import { HealthTours } from "../events/healthTours/healthTours";
 import styles from "./offer.module.scss";
+import { AquaFitnessOffer } from "./set/aquaFitness";
+import { PhysicalTherapyOffer } from "./set/physicalTherapy";
+import { SwimmingSchoolOffer } from "./set/swimmingSchool";
 import { Tab } from "./tab";
-import { CardWithImage, CardWithImageProps } from "../shared/card/card";
 
-const cards: Record<Tab, CardWithImageProps[]> = {
-  [Tab.SwimmingSchool]: [
-    {
-      href: "/dowiedz-sie-wiecej/plywanie-dla-niemowlat",
-      variant: "azureBlue",
-      src: "/assets/plywanie_dla_niemowlat.png",
-      alt: "pływanie dla niemowląt",
-      heading: "Pływanie dla niemowląt",
-    },
-    {
-      href: "/dowiedz-sie-wiecej/plywanie-dla-dzieci",
-      variant: "plum",
-      src: "/assets/plywanie_dla_dzieci.png",
-      alt: "pływanie dla dzieci",
-      heading: "Pływanie dla dzieci",
-    },
-  ],
-  [Tab.PhysicalTherapy]: [
-    {
-      href: "/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
-      variant: "softTeal",
-      src: "/assets/couple-relaxing.png",
-      alt: "rehabilitacja w wodzie",
-      heading: "Rehabilitacja w wodzie",
-    },
-    {
-      href: "/dowiedz-sie-wiecej/plywanie-korekcyjne",
-      variant: "tropicalCyan",
-      src: "/assets/baby-swimming.png",
-      alt: "pływanie korekcyjne",
-      heading: "Pływanie korekcyjne",
-    },
-  ],
-  [Tab.AquaFitness]: [
-    {
-      href: "/dowiedz-sie-wiecej/aqua-fitness",
-      variant: "sunsetHorizon",
-      src: "/assets/aqua-fitness.png",
-      alt: "aqua fitness",
-      heading: "Aqua Fitness",
-    },
-  ],
+const cards: Record<Tab, any> = {
+  [Tab.SwimmingSchool]: [<SwimmingSchoolOffer />],
+  [Tab.PhysicalTherapy]: <PhysicalTherapyOffer />,
+  [Tab.AquaFitness]: <AquaFitnessOffer />,
+  [Tab.Camps]: <Camps />,
+  [Tab.HealthTours]: <HealthTours />,
 };
 
 const headings: Record<Tab, string> = {
   [Tab.SwimmingSchool]: "Zapisz swoje dziecko na zajęcia",
   [Tab.AquaFitness]: "Zapisz się na zajęcia",
   [Tab.PhysicalTherapy]: "Zapisz siebie lub swoje dziecko na zajęcia",
+  [Tab.Camps]: "",
+  [Tab.HealthTours]: "",
 };
 
 export function Offer() {
@@ -78,15 +48,17 @@ export function Offer() {
           variant="green"
           {...getNavigationProps(Tab.PhysicalTherapy)}
         >
-          Fizjoterapia
+          Osteopatia
+        </OfferButton>
+        <OfferButton variant="blue" {...getNavigationProps(Tab.Camps)}>
+          Obozy i kolonie
+        </OfferButton>
+        <OfferButton variant="lime" {...getNavigationProps(Tab.HealthTours)}>
+          Turnusy zdrowotne
         </OfferButton>
       </div>
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
-      <div className={styles.cardsWrapper}>
-        {cards[activeTab].map((props) => (
-          <CardWithImage {...props} key={props.heading} />
-        ))}
-      </div>
+      <div>{cards[activeTab]}</div>
     </div>
   );
 }
