@@ -6,12 +6,11 @@ import { OfferButton } from "../offer/button/button";
 import { Camps } from "./camps/camps";
 import styles from "./events.module.scss";
 import { Tab } from "./tab";
-import { Courses } from "./courses/courses";
 import { HealthTours } from "./healthTours/healthTours";
 
 const eventPages: Record<Tab, JSX.Element> = {
   [Tab.Camps]: <Camps />,
-  [Tab.Courses]: <Courses />,
+  // [Tab.Courses]: <Courses />,
   [Tab.HealthTours]: <HealthTours />,
 };
 
@@ -24,9 +23,6 @@ export function Events() {
       <div className={styles.buttonsWrapper}>
         <OfferButton variant="blue" {...getNavigationProps(Tab.Camps)}>
           Obozy i kolonie
-        </OfferButton>
-        <OfferButton variant="green" {...getNavigationProps(Tab.Courses)}>
-          Kursy i szkolenia
         </OfferButton>
         <OfferButton variant="lime" {...getNavigationProps(Tab.HealthTours)}>
           Turnusy zdrowotne
