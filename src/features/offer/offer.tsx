@@ -13,11 +13,11 @@ import { SwimmingSchoolOffer } from "./set/swimmingSchool";
 import { Tab } from "./tab";
 
 const cards: Record<Tab, any> = {
-  [Tab.SwimmingSchool]: [<SwimmingSchoolOffer />],
-  [Tab.PhysicalTherapy]: <PhysicalTherapyOffer />,
-  [Tab.AquaFitness]: <AquaFitnessOffer />,
-  [Tab.Camps]: <Camps />,
-  [Tab.HealthTours]: <HealthTours />,
+  [Tab.SwimmingSchool]: [<SwimmingSchoolOffer key={Tab.SwimmingSchool} />],
+  [Tab.PhysicalTherapy]: <PhysicalTherapyOffer key={Tab.PhysicalTherapy} />,
+  [Tab.AquaFitness]: <AquaFitnessOffer key={Tab.AquaFitness} />,
+  [Tab.Camps]: <Camps key={Tab.Camps} />,
+  [Tab.HealthTours]: <HealthTours key={Tab.HealthTours} />,
 };
 
 const headings: Record<Tab, string> = {
