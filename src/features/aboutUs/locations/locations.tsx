@@ -40,7 +40,7 @@ const locations: Record<Tab, LocationPinProps[]> = {
     {
       objectName: "Toruń - Copernicus Hotel",
       address: "Bulwar Filadelfijski",
-      phoneNumbers: "607 880 086",
+      phoneNumbers: "603 256 706",
       emailAddress: "aquafitness@logafit.pl",
     },
   ],
