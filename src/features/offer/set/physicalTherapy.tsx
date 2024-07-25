@@ -10,11 +10,11 @@ const physicalTherapyTiles: CardWithImageProps[] = [
     heading: "Rehabilitacja w wodzie",
   },
   {
-    href: "/dowiedz-sie-wiecej/plywanie-korekcyjne",
+    href: "/dowiedz-sie-wiecej/osteopatia",
     variant: "tropicalCyan",
     src: "/assets/baby-swimming.png",
-    alt: "pływanie korekcyjne",
-    heading: "Pływanie korekcyjne",
+    alt: "osteopatia",
+    heading: "Osteopatia",
   },
 ] as const;
 

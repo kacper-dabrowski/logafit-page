@@ -16,6 +16,13 @@ const swimmingSchoolTiles: CardWithImageProps[] = [
     alt: "pływanie dla dzieci",
     heading: "Pływanie dla dzieci",
   },
+  {
+    href: "/dowiedz-sie-wiecej/plywanie-korekcyjne",
+    variant: "tropicalCyan",
+    src: "/assets/baby-swimming.png",
+    alt: "pływanie korekcyjne",
+    heading: "Pływanie korekcyjne",
+  },
 ];
 export function SwimmingSchoolOffer() {
   return <OfferSet cards={swimmingSchoolTiles} />;
