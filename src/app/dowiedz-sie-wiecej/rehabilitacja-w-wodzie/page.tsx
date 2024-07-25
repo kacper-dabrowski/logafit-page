@@ -1,5 +1,4 @@
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
-import { FileLink } from "../../../features/shared/fileLink/fileLink";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
 
@@ -49,17 +48,6 @@ export default function Page() {
                   <Paragraph>Wejście jednorazowe: 170 zł</Paragraph>
                 </li>
               </ul>
-              <div className={styles.buttonsWrapper}>
-                <FileLink fileName="GRAFIK-SZKOLA-PLYWANIA-23.pdf">
-                  Grafik
-                </FileLink>
-                <FileLink fileName="Harmonogram-szkola-plywania-23.pdf">
-                  Harmonogram
-                </FileLink>
-                <FileLink fileName="Regulamin-Szkola-Plywania-Logafit.pdf">
-                  Regulamin
-                </FileLink>
-              </div>
             </div>
           </div>
         </div>
