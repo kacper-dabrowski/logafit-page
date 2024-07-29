@@ -4,14 +4,18 @@ import styles from "./headers.module.scss";
 
 interface FocusableByLink {
   id?: string;
+  classNames?: string;
 }
 
 export function PrimaryHeader({
   children,
   id,
+  classNames,
 }: React.PropsWithChildren<FocusableByLink>) {
+  const headerClasses = clsx(styles.secondary, classNames);
+
   return (
-    <h1 id={id} className={styles.secondary}>
+    <h1 id={id} className={headerClasses}>
       {children}
     </h1>
   );
