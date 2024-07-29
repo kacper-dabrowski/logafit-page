@@ -1,26 +1,41 @@
-import { CalendarIcon, PinIcon, UserGroupIcon } from "../shared/icons";
 import { SecondaryHeader } from "../shared/typography/headers";
+import { RecruitmentCard } from "./card/card";
 import styles from "./recruitment.module.scss";
+import olenderPhoto from "../../../public/assets/olender.png";
+import bazynskichPhoto from "../../../public/assets/bazynskich.png";
+import copernicusHotelPhoto from "../../../public/assets/hotel_copernicus.png";
+import halleraPhoto from "../../../public/assets/basen_hallera.avif";
 
 export function Recruitment() {
   return (
-    <div className={styles.wrapper}>
-      <SecondaryHeader>Nabór na sezon 2024/2025</SecondaryHeader>
-      <div className={styles.container}>
-        <CalendarIcon color="black" />
-        od 15 sierpnia 2024
+    <div className={styles.container}>
+      <div className={styles.headings}>
+        <SecondaryHeader classNames={styles.heading}>
+          Nabór na sezon 2024/2025
+        </SecondaryHeader>
+        <h3 className={styles.secondLevelHeading}>od 15 sierpnia 2024</h3>
       </div>
-      <div className={styles.container}>
-        <PinIcon color="black" />
-        <p>Basen w hotelu Copernicus,</p>
-        <p>Aqua Toruń Bażyńskich,</p>
-        <p>Olender Wielka Nieszawka</p>
-      </div>
-      <div className={styles.container}>
-        <UserGroupIcon color="black" />
-        <p>biuro@logafit.pl</p>
-        <br />
-        <p> tel. 607880086, 691376287</p>
+      <div className={styles.wrapper}>
+        <RecruitmentCard
+          image={copernicusHotelPhoto}
+          name="Basen Hotel Copernicus"
+          variant="yellow"
+        />
+        <RecruitmentCard
+          image={bazynskichPhoto}
+          name="Aqua Toruń Bażyńskich"
+          variant="lightBlue"
+        />
+        <RecruitmentCard
+          image={olenderPhoto}
+          name="Olender Wielka Nieszawka"
+          variant="red"
+        />
+        <RecruitmentCard
+          image={halleraPhoto}
+          name="Mini Aqua Park Hallera"
+          variant="yellow"
+        />
       </div>
     </div>
   );
