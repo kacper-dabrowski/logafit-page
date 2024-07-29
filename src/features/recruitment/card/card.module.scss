@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+
+  --background-color: transparent;
+  --text-color: black;
+
+  &.yellow {
+    --text-color: #806300;
+    --background-color: #ffd74b;
+  }
+
+  &.red {
+    --text-color: #600;
+    --background-color: #ff4b4b;
+  }
+
+  &.lightBlue {
+    --text-color: #006980;
+    --background-color: #4bdfff;
+  }
+
+  background-color: var(--background-color);
+
+  .text {
+    color: var(--text-color);
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    flex:1;
+  }
+}
+
+.imageWrapper {
+  img {
+    border-radius: 20px;
+  }
+}

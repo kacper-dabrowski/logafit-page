@@ -13,6 +13,7 @@ export function Header() {
           alt="nagłówek"
           quality={100}
           priority
+          className={styles.headerImage}
         />
       </div>
       <div className={styles.headerMobile}>
@@ -24,6 +25,7 @@ export function Header() {
           quality={100}
           alt="nagłówek mobilny"
           priority
+          className={styles.headerImage}
         />
       </div>
     </div>

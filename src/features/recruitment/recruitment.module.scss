@@ -1,6 +1,30 @@
-.wrapper {
+.heading {
+  color: #ffa24b;
+  font-size: 56px;
+}
+
+.headings {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.secondLevelHeading {
+  font-size: 24px;
+  color: #994a00;
+  margin-top: 20px;
+}
+
+.container {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
