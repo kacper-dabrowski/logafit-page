@@ -5,7 +5,7 @@ import styles from "./card.module.scss";
 interface RecruitmentCardProps {
   image: string | StaticImageData;
   name: string;
-  variant: "lightBlue" | "red" | "yellow";
+  variant: "lightBlue" | "red" | "yellow" | "green";
 }
 
 export function RecruitmentCard({
