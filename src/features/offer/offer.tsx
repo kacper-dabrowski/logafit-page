@@ -59,6 +59,9 @@ export function Offer() {
       </div>
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
       <div>{cards[activeTab]}</div>
+      <div className={styles.hidden}>
+        {Object.values(cards).map((value) => value)}
+      </div>
     </div>
   );
 }
