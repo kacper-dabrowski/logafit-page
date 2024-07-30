@@ -13,7 +13,7 @@ export function Recruitment() {
         <SecondaryHeader classNames={styles.heading}>
           Nabór na sezon 2024/2025
         </SecondaryHeader>
-        <h3 className={styles.secondLevelHeading}>od 15 sierpnia 2024</h3>
+        <h3 className={styles.thirdLevelHeading}>od 15 sierpnia 2024</h3>
       </div>
       <div className={styles.wrapper}>
         <RecruitmentCard
@@ -37,6 +37,7 @@ export function Recruitment() {
           variant="yellow"
         />
       </div>
+      <h2 className={styles.secondLevelHeading}>Skontaktuj się z nami</h2>
     </div>
   );
 }
