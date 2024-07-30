@@ -1,3 +1,4 @@
+@import "../../shared/styles/variables/breakpoints.scss";
 .heading {
   color: #ffa24b;
   font-size: 56px;
@@ -34,4 +35,35 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+}
+
+.contact {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactLink {
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: $screen-lg) {
+    width: initial;
+    text-align: left;
+  }
+}
+
+.contactText {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contactImage{
+  height:75px;
+  width: auto;
 }
