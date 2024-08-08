@@ -4,7 +4,6 @@ import { useNavigation } from "../../features/navigation/useNavigation";
 import { OfferButton } from "../../features/offer/button/button";
 import { SecondaryHeader } from "../../features/shared/typography/headers";
 import { AquaFitnessClassesSignForm } from "../../features/signForm/form/aquaFitness";
-import { DefaultCourseSignForm } from "../../features/signForm/form/defaultCourse";
 import { PhysicalTherapySignForm } from "../../features/signForm/form/physicalTherapy";
 import { SwimmingSchoolSignForm } from "../../features/signForm/form/swimmingSchool";
 import { Tab } from "../../features/signForm/tabs";
@@ -14,7 +13,6 @@ const formToTabMap: Record<Tab, JSX.Element> = {
   [Tab.AquaFitnessClasses]: <AquaFitnessClassesSignForm />,
   [Tab.SwimmingSchool]: <SwimmingSchoolSignForm />,
   [Tab.PhysicalTherapy]: <PhysicalTherapySignForm />,
-  [Tab.DefaultCourse]: <DefaultCourseSignForm />,
 };
 
 export default function Page() {
@@ -38,10 +36,7 @@ export default function Page() {
           variant="blue"
           {...getNavigationProps(Tab.PhysicalTherapy)}
         >
-          Fizjoterapia
-        </OfferButton>
-        <OfferButton variant="blue" {...getNavigationProps(Tab.DefaultCourse)}>
-          Kursy i szkolenia
+          Osteopatia
         </OfferButton>
       </div>
 

@@ -23,8 +23,8 @@ export function Camps() {
       <div className={styles.switchesWrapper}>
         <EventSwitch {...allProps}>
           {activeTab === Tab.WinterCamps
-            ? "Wydarzenia zimowe"
-            : "Wydarzenia letnie"}
+            ? "Wydarzenia letnie"
+            : "Wydarzenia zimowe"}
         </EventSwitch>
       </div>
     </>
@@ -33,16 +33,16 @@ export function Camps() {
 
 function getEventSwitchProps(activeTab: Tab) {
   const variant: "blue" | "yellow" =
-    activeTab === Tab.WinterCamps ? "blue" : "yellow";
+    activeTab === Tab.SummerCamps ? "blue" : "yellow";
   return {
     tab: activeTab === Tab.WinterCamps ? Tab.SummerCamps : Tab.WinterCamps,
     variant,
     renderIcon: () =>
-      activeTab === Tab.WinterCamps ? (
+      activeTab === Tab.SummerCamps ? (
         <SnowflakeIcon color="#4433B2" />
       ) : (
         <SunIcon color="#B28F33" />
       ),
-    iconAltText: activeTab === Tab.WinterCamps ? "śnieżynka" : "słońce",
+    iconAltText: activeTab === Tab.SummerCamps ? "śnieżynka" : "słońce",
   };
 }

@@ -24,6 +24,10 @@
   position: relative;
   padding-top: 30px;
 
+  img {
+    height: auto;
+  }
+
   @media (min-width: $screen-lg) {
     display: none;
   }

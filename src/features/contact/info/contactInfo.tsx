@@ -9,8 +9,8 @@ export function ContactInfo() {
           <p className={styles.text}>Aleksandra Lorenc - Gawrych</p>
           <p className={styles.text}>Okonin 63; 86-330 Mełno</p>
           <p className={styles.text}>NIP: 876 223 52 50</p>
-          <p className={styles.text}>Credit Agricole</p>
-          <p className={styles.text}>95 1940 1076 3105 8058 0000 0000</p>
+          <p className={styles.text}>PKO</p>
+          <p className={styles.text}>15 1020 5040 0000 6602 0259 5999</p>
         </div>
       </div>
       <div>

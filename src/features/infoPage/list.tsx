@@ -9,6 +9,7 @@ interface ListProps {
 interface ListItemProps {
   content: string;
   lineBreak?: boolean;
+  title?: string;
 }
 
 export function List({ items }: ListProps) {
@@ -26,7 +27,12 @@ function renderTextList(item: ListItemProps | string) {
   return (
     <React.Fragment key={item.content}>
       <li className={styles.listItem}>
-        <Paragraph>{item.content}</Paragraph>
+        <Paragraph>
+          {item.title ? (
+            <span className={styles.bold}>{item.title} </span>
+          ) : null}
+          {item.content}
+        </Paragraph>
       </li>
       {item.lineBreak ? <br /> : null}
     </React.Fragment>

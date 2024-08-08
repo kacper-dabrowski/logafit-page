@@ -1,6 +1,6 @@
 import { AboutUs } from "../features/aboutUs/aboutUs";
-import { Events } from "../features/events/events";
 import { Offer } from "../features/offer/offer";
+import { Recruitment } from "../features/recruitment/recruitment";
 import { Header } from "../layout/header/header";
 import styles from "./page.module.scss";
 
@@ -10,8 +10,10 @@ export default function Home() {
       <Header />
       <div className={styles.mainWrapper}>
         <div className={styles.background} />
-        <Offer />
-        <Events />
+        <div className={styles.wrapper}>
+          <Offer />
+          <Recruitment />
+        </div>
       </div>
       <AboutUs />
     </div>
