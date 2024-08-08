@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SecondaryHeader } from "../shared/typography/headers";
+import { PrimaryHeader } from "../shared/typography/headers";
 import { RecruitmentCard } from "./card/card";
 import styles from "./recruitment.module.scss";
 import olenderPhoto from "../../../public/assets/olender.png";
@@ -14,9 +14,9 @@ export function Recruitment() {
   return (
     <div className={styles.container}>
       <div className={styles.headings}>
-        <SecondaryHeader classNames={styles.heading}>
+        <PrimaryHeader classNames={styles.heading}>
           Nabór na sezon 2024/2025
-        </SecondaryHeader>
+        </PrimaryHeader>
         <h3 className={styles.thirdLevelHeading}>od 15 sierpnia 2024</h3>
       </div>
       <div className={styles.wrapper}>

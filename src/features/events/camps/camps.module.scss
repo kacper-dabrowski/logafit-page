@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   padding-bottom: 15px;
-  flex-grow: 1;
+  gap: 15px;
+  flex-wrap: wrap;
 
   @media (min-width: $screen-lg) {
     margin: 0 auto;
