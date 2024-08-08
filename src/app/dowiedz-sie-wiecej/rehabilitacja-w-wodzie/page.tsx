@@ -29,7 +29,7 @@ export default function Page() {
         <div>
           <div className={styles.topWrapper}>
             <div>
-              <h3 className={styles.secondaryHeader}>Organizacja zajęć</h3>
+              <h2 className={styles.secondaryHeader}>Organizacja zajęć</h2>
               <Paragraph>
                 Sesja terapeutyczna kierowana jest do dzieci m.in. z
                 zaburzeniami napięcia mięśniowego, wcześniaków, dziećmi z
@@ -40,7 +40,7 @@ export default function Page() {
               </Paragraph>
             </div>
             <div>
-              <h3 className={styles.secondaryHeader}>Cennik</h3>
+              <h2 className={styles.secondaryHeader}>Cennik</h2>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <Paragraph>Udział w zajęciach: 10 spotkań – 500 zł</Paragraph>

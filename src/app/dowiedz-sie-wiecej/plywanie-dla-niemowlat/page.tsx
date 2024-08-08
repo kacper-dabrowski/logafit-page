@@ -42,7 +42,7 @@ export default function Page() {
         <div>
           <div className={styles.topWrapper}>
             <div>
-              <h3 className={styles.secondaryHeader}>Organizacja zajęć</h3>
+              <h2 className={styles.secondaryHeader}>Organizacja zajęć</h2>
               <Paragraph>
                 Spotkania realizujemy w warunkach przyjaznych najmłodszym
                 dzieciom. Temperatura wody wynosi 32-33 stopnie Celsiusza.
@@ -75,7 +75,7 @@ export default function Page() {
               </ul>
             </div>
             <div>
-              <h3 className={styles.secondaryHeader}>Cennik</h3>
+              <h2 className={styles.secondaryHeader}>Cennik</h2>
               <List
                 items={[
                   "Zajęcia grupowe: 10 wejść – 500 zł",

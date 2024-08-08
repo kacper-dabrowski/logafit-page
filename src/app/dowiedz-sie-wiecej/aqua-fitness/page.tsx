@@ -38,7 +38,7 @@ export default function Page() {
         <div>
           <div className={styles.topWrapper}>
             <div>
-              <h3 className={styles.secondaryHeader}>Cennik</h3>
+              <h2 className={styles.secondaryHeader}>Cennik</h2>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <Paragraph>Jednorazowe wejście: 40 zł</Paragraph>

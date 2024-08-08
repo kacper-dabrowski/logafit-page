@@ -1,6 +1,6 @@
 "use client";
 
-import { SecondaryHeader } from "@/features/shared/typography/headers";
+import { PrimaryHeader } from "@/features/shared/typography/headers";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
 
@@ -63,7 +63,7 @@ export function Offer() {
 
   return (
     <div>
-      <SecondaryHeader id="oferta">Oferta</SecondaryHeader>
+      <PrimaryHeader id="oferta">Oferta</PrimaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton
           variant="green"

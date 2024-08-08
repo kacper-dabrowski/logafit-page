@@ -2,7 +2,7 @@
 
 import { useNavigation } from "../../features/navigation/useNavigation";
 import { OfferButton } from "../../features/offer/button/button";
-import { SecondaryHeader } from "../../features/shared/typography/headers";
+import { PrimaryHeader } from "../../features/shared/typography/headers";
 import { AquaFitnessClassesSignForm } from "../../features/signForm/form/aquaFitness";
 import { DefaultCourseSignForm } from "../../features/signForm/form/defaultCourse";
 import { PhysicalTherapySignForm } from "../../features/signForm/form/physicalTherapy";
@@ -21,9 +21,9 @@ export default function Page() {
   const { getNavigationProps, activeTab } = useNavigation(Tab.SwimmingSchool);
   return (
     <div>
-      <SecondaryHeader>
+      <PrimaryHeader>
         Wybierz aktywność, na którą chcesz się zapisać
-      </SecondaryHeader>
+      </PrimaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton variant="blue" {...getNavigationProps(Tab.SwimmingSchool)}>
           Szkoła pływania

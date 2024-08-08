@@ -1,12 +1,12 @@
 import { ContactInfo } from "../../features/contact/info/contactInfo";
 import { InfoIcon, LinkTarget } from "../../features/contact/icon/infoIcon";
-import { SecondaryHeader } from "../../features/shared/typography/headers";
+import { PrimaryHeader } from "../../features/shared/typography/headers";
 import styles from "./footer.module.scss";
 
 export function Footer() {
   return (
     <div className={styles.footer}>
-      <SecondaryHeader id="kontakt">Kontakt</SecondaryHeader>
+      <PrimaryHeader id="kontakt">Kontakt</PrimaryHeader>
       <ContactInfo />
       <div className={styles.iconsWrapper}>
         <InfoIcon
