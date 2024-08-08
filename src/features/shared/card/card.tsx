@@ -31,7 +31,7 @@ export function Card({ href, heading, variant }: CardProps) {
       <div className={containerClasses}>
         <div className={styles.wrapper}>
           <div className={styles.textWrapper}>
-            <h3 className={styles.title}>{heading}</h3>
+            <h2 className={styles.title}>{heading}</h2>
           </div>
 
           <div className={styles.learnMore}>
@@ -75,7 +75,7 @@ export function CardWithImage({
 
         <div className={styles.wrapper}>
           <div className={styles.textWrapper}>
-            <h3 className={styles.title}>{heading}</h3>
+            <h2 className={styles.title}>{heading}</h2>
           </div>
           <div className={styles.learnMore}>
             <p>Dowiedz się więcej</p>

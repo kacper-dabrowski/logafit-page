@@ -54,7 +54,7 @@ export function EventCard({
   return (
     <div className={containerClasses}>
       <div className={styles.topSection}>
-        <h3 className={styles.heading}>{title}</h3>
+        <h2 className={styles.heading}>{title}</h2>
         {type === "healthTour" ? null : (
           <div className={styles.badge}>
             {icon}

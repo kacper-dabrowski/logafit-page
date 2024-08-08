@@ -6,14 +6,14 @@ interface FocusableByLink {
   id?: string;
 }
 
-export function SecondaryHeader({
+export function PrimaryHeader({
   children,
   id,
 }: React.PropsWithChildren<FocusableByLink>) {
   return (
-    <h2 id={id} className={styles.secondary}>
+    <h1 id={id} className={styles.secondary}>
       {children}
-    </h2>
+    </h1>
   );
 }
 
@@ -26,8 +26,8 @@ export function GradientHeader({
   children,
 }: React.PropsWithChildren<GradientHeaderProps>) {
   return (
-    <h3 className={clsx(styles.gradientHeading, styles[variant])}>
+    <h2 className={clsx(styles.gradientHeading, styles[variant])}>
       {children}
-    </h3>
+    </h2>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GradientHeader, SecondaryHeader } from "../shared/typography/headers";
+import { GradientHeader, PrimaryHeader } from "../shared/typography/headers";
 import styles from "./aboutUs.module.scss";
 import { Locations } from "./locations/locations";
 
@@ -9,7 +9,7 @@ export function AboutUs() {
     <div className={styles.container}>
       <div className={styles.background} />
 
-      <SecondaryHeader id="o-nas">O nas</SecondaryHeader>
+      <PrimaryHeader id="o-nas">O nas</PrimaryHeader>
       <div className={styles.wrapper}>
         <Image
           src="/assets/about-us-logo.svg"

@@ -1,6 +1,6 @@
 "use client";
 
-import { SecondaryHeader } from "@/features/shared/typography/headers";
+import { PrimaryHeader } from "@/features/shared/typography/headers";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "../offer/button/button";
 import { Camps } from "./camps/camps";
@@ -20,7 +20,7 @@ export function Events() {
 
   return (
     <div className={styles.wrapper}>
-      <SecondaryHeader id="wydarzenia">Wydarzenia</SecondaryHeader>
+      <PrimaryHeader id="wydarzenia">Wydarzenia</PrimaryHeader>
       <div className={styles.buttonsWrapper}>
         <OfferButton variant="blue" {...getNavigationProps(Tab.Camps)}>
           Obozy i kolonie
