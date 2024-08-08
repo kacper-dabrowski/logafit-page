@@ -2,7 +2,7 @@ import { EventCard } from "../components/card/card";
 
 export function SummerCamps() {
   return (
-    <div>
+    <>
       <EventCard
         title="Półkolonie pływackie"
         imageSrc="/assets/kids-having-fun.png"
@@ -60,6 +60,6 @@ export function SummerCamps() {
         )}
         type="summer"
       />
-    </div>
+    </>
   );
 }
