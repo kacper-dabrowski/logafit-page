@@ -1,17 +1,18 @@
 import clsx from "clsx";
-import Image from "next/image";
-import styles from "./card.module.scss";
 import {
-  UserGroupIcon,
   CalendarIcon,
   PinIcon,
   SnowflakeIcon,
   SunIcon,
+  UserGroupIcon,
 } from "../../../../shared/icons";
+import styles from "./card.module.scss";
 
 interface EventCardProps {
   title: string;
+  // eslint-disable-next-line react/no-unused-prop-types
   imageSrc: string;
+  // eslint-disable-next-line react/no-unused-prop-types
   imageAlt: string;
   renderDates: () => JSX.Element;
   renderLocation: () => JSX.Element;
@@ -32,8 +33,6 @@ export function EventCard({
   renderAge,
   renderDates,
   renderLocation,
-  imageAlt,
-  imageSrc,
 }: EventCardProps) {
   const containerClasses = clsx(styles.card, {
     [styles.blue]: type === "winter",
@@ -80,13 +79,13 @@ export function EventCard({
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <Image
+          {/* <Image
             className={styles.image}
             src={imageSrc}
             width={202}
             height={150}
             alt={imageAlt}
-          />
+          /> */}
         </div>
       </div>
     </div>
