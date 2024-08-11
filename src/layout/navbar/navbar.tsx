@@ -29,11 +29,6 @@ export function Navbar({ additionalClasses }: NavbarProps) {
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/#wydarzenia" aria-label="wydarzenia">
-            Wydarzenia
-          </Link>
-        </li>
-        <li className={styles.item}>
           <Link href="/#o-nas" aria-label="o nas">
             O nas
           </Link>
