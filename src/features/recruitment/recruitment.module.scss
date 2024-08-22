@@ -1,5 +1,12 @@
 @import "../../shared/styles/variables/breakpoints.scss";
 
+@mixin mobileFontSize() {
+  @media (min-width:$screen-lg) {
+    font-size: 30px;
+  }
+  font-size: 20px;
+}
+
 .heading {
   color: #ffa24b;
   font-size: 56px;
@@ -40,13 +47,17 @@
 
 .contact {
   margin-top: 20px;
-  width: 100%;
+  max-width: 550px;
   display: flex;
   flex-wrap: wrap;
   flex: 1;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  @media (min-width: $screen-lg) {
+    max-width: initial;
+  }
 }
 
 .contactLink {
@@ -68,3 +79,27 @@
   height: 75px;
   width: auto;
 }
+
+.contactData {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  .green {
+    color: #2d8939;
+    font-size: 30px;
+    @include mobileFontSize();
+  }
+
+  .purple {
+    color: #38335e;
+    font-size: 30px;
+    @include mobileFontSize();
+  }
+}
+
+

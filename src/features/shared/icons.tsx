@@ -96,6 +96,22 @@ export function SnowflakeIcon({ color }: IconProps) {
     </IconContainer>
   );
 }
+
+export function ArrowIcon({ color }: IconProps) {
+  return (
+    <IconContainer>
+      <svg {...mutualProps} width={24} height={24} fill="none">
+        <path
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.6}
+          d="M3 12h18m0 0-7-7m7 7-7 7"
+        />
+      </svg>
+    </IconContainer>
+  );
+}
 function IconContainer({ children }: PropsWithChildren) {
-  return <div className={styles.iconContainer}>{children} </div>;
+  return <div className={styles.iconContainer}>{children}</div>;
 }

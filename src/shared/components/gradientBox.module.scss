@@ -1,0 +1,41 @@
+.box {
+  position: relative;
+  padding: 20px;
+
+  --color-primary: transparent;
+  --color-secondary: transparent;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  &.greenVariant {
+    --color-primary: #8fe2d2;
+    --color-secondary: #8ece42;
+  }
+
+  &.blueVariant {
+    --color-primary: #18427a;
+    --color-secondary: #0093da;
+  }
+
+  &.purpleVariant {
+    --color-primary: #8177d8;
+    --color-secondary: #69ceff;
+  }
+}

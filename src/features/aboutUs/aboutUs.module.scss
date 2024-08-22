@@ -47,3 +47,25 @@
   gap: 15px;
   justify-content: center;
 }
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+.signUp {
+  display: flex;
+  gap: 10px;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.highlighted {
+  font-size: 32px;
+  color: #4433b2;
+  font-weight: 700;
+}
