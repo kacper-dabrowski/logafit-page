@@ -12,7 +12,7 @@ const physicalTherapyTiles: CardWithImageProps[] = [
   {
     href: "/dowiedz-sie-wiecej/osteopatia",
     variant: "tropicalCyan",
-    src: "/assets/baby-swimming.png",
+    src: "/assets/physiotherapy_baby.jpeg",
     alt: "osteopatia",
     heading: "Osteopatia",
   },
