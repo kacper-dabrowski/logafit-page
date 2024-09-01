@@ -1,5 +1,4 @@
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
-import { FileLink } from "../../../features/shared/fileLink/fileLink";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
 
@@ -54,14 +53,6 @@ export default function Page() {
                   </Paragraph>
                 </li>
               </ul>
-              <div className={styles.buttonsWrapper}>
-                <FileLink fileName="GRAFIK-AQUA-FITNESS-23i24.docx">
-                  Grafik
-                </FileLink>
-                <FileLink fileName="REGULAMIN-AQUA-FITNESS-.pdf">
-                  Regulamin
-                </FileLink>
-              </div>
             </div>
           </div>
         </div>
