@@ -42,10 +42,7 @@ export default function Page() {
               <h2 className={styles.secondaryHeader}>Cennik</h2>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <Paragraph>Udział w zajęciach: 10 spotkań – 500 zł</Paragraph>
-                </li>
-                <li className={styles.listItem}>
-                  <Paragraph>Wejście jednorazowe: 170 zł</Paragraph>
+                  <Paragraph>Terapia: 150 zł</Paragraph>
                 </li>
               </ul>
             </div>
