@@ -2,13 +2,11 @@
 
 .container {
   border-radius: 20px;
-  grid-template-columns: none;
-  grid-template-rows: none;
   min-width: 300px;
 
   &.withImage {
     @media (min-width: $screen-lg) {
-      min-width: 400px;
+      min-width: 550px;
       display: grid;
       grid-template-columns: 250px 1fr;
       grid-template-rows: none;
@@ -105,6 +103,7 @@
   display: none;
 
   @media (min-width: $screen-lg) {
+    border-radius: 20px;
     display: block;
   }
 }

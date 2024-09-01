@@ -72,7 +72,6 @@ export function CardWithImage({
           alt={alt}
           className={styles.image}
         />
-
         <div className={styles.wrapper}>
           <div className={styles.textWrapper}>
             <h2 className={styles.title}>{heading}</h2>
