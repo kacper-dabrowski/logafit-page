@@ -12,7 +12,7 @@ const imageProps = {
 export default function Page() {
   return (
     <div className={styles.page}>
-      <h2 className={styles.heading}>Rehabilitacja w wodzie</h2>
+      <h2 className={styles.heading}>Terapia w wodzie</h2>
       <div>
         <TextWithImage imageProps={imageProps} centered>
           <div>
