@@ -2,17 +2,13 @@ import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
 import styles from "./card.module.scss";
 
-interface RecruitmentCardProps {
+interface WhereAreWeCardProps {
   image: string | StaticImageData;
   name: string;
   variant: "lightBlue" | "red" | "yellow" | "green";
 }
 
-export function RecruitmentCard({
-  image,
-  name,
-  variant,
-}: RecruitmentCardProps) {
+export function WhereAreWeCard({ image, name, variant }: WhereAreWeCardProps) {
   const containerClassNames = clsx(styles.container, styles[variant]);
 
   return (
