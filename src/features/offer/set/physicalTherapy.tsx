@@ -6,8 +6,8 @@ const physicalTherapyTiles: CardWithImageProps[] = [
     href: "/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
     variant: "softTeal",
     src: "/assets/couple-relaxing.png",
-    alt: "rehabilitacja w wodzie",
-    heading: "Rehabilitacja w wodzie",
+    alt: "terapia w wodzie",
+    heading: "Terapia w wodzie",
   },
   {
     href: "/dowiedz-sie-wiecej/osteopatia",
