@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetching content with contentful should fetch pages correctly and map them to the correct format 1`] = `
+{
+  "category": "swimmingSchoolCategory",
+  "files": undefined,
+  "image": {
+    "alt": "",
+    "height": 190,
+    "url": "https://images.ctfassets.net/19pcwgu0otpa/1NeOU6yAjWnHksIyIVQTst/2d82f297cebd33c6401e514e28f360d3/baby-swimming.png",
+    "width": 253,
+  },
+  "pathname": "/dowiedz-sie-wiecej/plywanie-korekcyjne",
+  "title": "Pływanie korekcyjne",
+}
+`;
