@@ -1,7 +1,5 @@
 export enum Tab {
-  SwimmingSchool,
-  PhysicalTherapy,
-  AquaFitness,
-  Camps,
-  HealthTours,
+  SwimmingSchool = "Szkoła pływania",
+  PhysicalTherapy = "Osteopatia",
+  AquaFitness = "Aqua Fitness",
 }

@@ -2,6 +2,14 @@
 const nextConfig = {
   images: {
     formats: ["image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+        port: "",
+        pathname: "**",
+      },
+    ],
   },
 };
 

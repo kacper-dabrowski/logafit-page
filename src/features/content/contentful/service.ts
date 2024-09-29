@@ -14,6 +14,18 @@ export class ContentfulContentService {
     });
   }
 
+  async getPageByPathname(pathname: string): Promise<PageModel | undefined> {
+    const pages = await this.getPages();
+
+    return pages.find((page) => page.pathname === pathname);
+  }
+
+  async getPageByCategory(category: string): Promise<PageModel | undefined> {
+    const pages = await this.getPages();
+
+    return pages.find((page) => page.category === category);
+  }
+
   async getPages(): Promise<PageModel[]> {
     if (this.pages.length > 0) {
       return this.pages;
@@ -32,3 +44,5 @@ export class ContentfulContentService {
     });
   }
 }
+
+export const contentfulContentService = new ContentfulContentService();

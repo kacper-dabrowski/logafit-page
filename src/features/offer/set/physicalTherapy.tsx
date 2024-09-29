@@ -3,7 +3,7 @@ import { OfferSet } from "./set";
 
 const physicalTherapyTiles: CardWithImageProps[] = [
   {
-    href: "/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
+    href: "/dowiedz-sie-wiecej/terapia-w-wodzie",
     variant: "softTeal",
     src: "/assets/couple-relaxing.png",
     alt: "terapia w wodzie",
