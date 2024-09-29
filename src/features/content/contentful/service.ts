@@ -20,10 +20,10 @@ export class ContentfulContentService {
     return pages.find((page) => page.pathname === pathname);
   }
 
-  async getPageByCategory(category: string): Promise<PageModel | undefined> {
+  async getPathnames(): Promise<string[]> {
     const pages = await this.getPages();
 
-    return pages.find((page) => page.category === category);
+    return pages.map((page) => page.pathname);
   }
 
   async getPages(): Promise<PageModel[]> {
@@ -31,16 +31,16 @@ export class ContentfulContentService {
       return this.pages;
     }
 
-    const pages = await this.fetchPages();
+    const pages = await this.fetchPages("page");
 
     return this.pages.concat(
       pages.items.map((page) => mapContentfulPageToPageModel(page)),
     );
   }
 
-  private async fetchPages() {
+  private async fetchPages(contentType: string) {
     return this.client.getEntries({
-      content_type: "page",
+      content_type: contentType,
     });
   }
 }

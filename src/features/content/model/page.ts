@@ -13,6 +13,15 @@ export interface PageModel {
   thumbnail?: PageImageData;
   pathname: string;
   category: PageCategory;
+  tileColor:
+    | "softTeal"
+    | "azureBlue"
+    | "plum"
+    | "tropicalCyan"
+    | "sunsetHorizon"
+    | "beachSand"
+    | "blueGreen"
+    | "turquoisePurple";
 }
 
 export interface ThumbnailData {

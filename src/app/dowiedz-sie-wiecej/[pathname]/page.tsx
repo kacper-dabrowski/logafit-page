@@ -11,9 +11,9 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const pages = await contentfulContentService.getPages();
+  const pathnames = await contentfulContentService.getPathnames();
 
-  return pages.map((page) => ({ pathname: page.pathname }));
+  return pathnames.map((pathname) => ({ pathname }));
 }
 
 export default async function Page({ params }: PageProps) {

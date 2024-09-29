@@ -6,6 +6,8 @@ export const mapContentfulPageToPageModel = (dto: any): PageModel => {
 
   const thumbnailData = dto?.fields?.thumbnail;
 
+  console.log(dto);
+
   return {
     title: dto.fields.title,
     content: dto.fields.content,
@@ -14,6 +16,7 @@ export const mapContentfulPageToPageModel = (dto: any): PageModel => {
     thumbnail: mapImageDto(thumbnailData),
     pathname: dto.fields.pathname,
     category: dto.fields.category.fields.title,
+    tileColor: dto.fields.tileColor,
   };
 };
 

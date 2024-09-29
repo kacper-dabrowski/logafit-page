@@ -16,7 +16,7 @@ function getCardsForCategory(pages: PageModel[], category: string) {
     src: page?.thumbnail?.url!,
     alt: page.thumbnail?.alt!,
     heading: page.title,
-    variant: "blueGreen" as const,
+    variant: page.tileColor,
     href: `/dowiedz-sie-wiecej/${page.pathname}`,
   }));
 }
@@ -60,9 +60,9 @@ export function Offer({ pages }: { pages: PageModel[] }) {
       <div>
         <OfferSet cards={getCardsForCategory(pages, activeTab)} />
       </div>
-      <div className={styles.hidden}>
+      {/* <div className={styles.hidden}>
         {Object.values(getCardsForCategory).map((value) => value)}
-      </div>
+      </div> */}
     </div>
   );
 }
