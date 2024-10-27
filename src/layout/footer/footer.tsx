@@ -16,6 +16,12 @@ export function Footer() {
           content="691 376 287"
         />
         <InfoIcon
+          href="tel:607-880-086"
+          imgAlt="ikona telefonu"
+          imgSrc="/assets/phone-call.svg"
+          content="607 880 086"
+        />
+        <InfoIcon
           href="mailto:biuro@logafit.pl"
           imgAlt="ikona koperty"
           imgSrc="/assets/envelope.svg"
