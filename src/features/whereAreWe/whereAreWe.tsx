@@ -17,7 +17,6 @@ export function WhereAreWe() {
         <PrimaryHeader classNames={styles.heading}>
           Miejsca realizacji zajęć
         </PrimaryHeader>
-        <h3 className={styles.thirdLevelHeading}>od 15 sierpnia 2024</h3>
       </div>
       <div className={styles.wrapper}>
         <WhereAreWeCard
