@@ -12,7 +12,7 @@ const eventPages: Record<Tab, JSX.Element> = {
 };
 
 export function Camps() {
-  const { getNavigationProps, activeTab } = useNavigation(Tab.SummerCamps);
+  const { getNavigationProps, activeTab } = useNavigation(Tab.WinterCamps);
   const { tab, ...restProps } = getEventSwitchProps(activeTab);
 
   const allProps = { ...getNavigationProps(tab), ...restProps };
