@@ -33,6 +33,35 @@ export default function Page() {
             również osoby nie umiejące pływać oraz te, które ze względu na
             częste kontuzje nie mogą korzystać z lądowych form usprawniania.
           </Paragraph>
+          <br />
+          <Paragraph>
+            Aqua Mama to forma aktywności fizycznej w wodzie, która jest
+            szczególnie polecana kobietom w ciąży. Zajęcia odbywają się w
+            basenie o bezpiecznej głębokości, w przyjemnej, ciepłej wodzie.
+            Trening jest dostosowany do specyficznych potrzeb przyszłych mam i
+            skupia się na wzmocnieniu mięśni, poprawie kondycji oraz redukcji
+            obciążeń stawów i kręgosłupa, co jest kluczowe w czasie ciąży.
+          </Paragraph>
+          <br />
+          <Paragraph>
+            Ćwiczenia w wodzie zmniejszają uczucie ciężkości ciała dzięki
+            wyporności, co sprawia, że trening jest bardziej komfortowy i
+            bezpieczny dla kobiet na każdym etapie ciąży. Aqua fitness obejmuje
+            ćwiczenia aerobowe, wzmacniające oraz rozciągające, które są
+            delikatne, ale jednocześnie skuteczne. Program zwykle obejmuje
+            łagodne ruchy nóg i ramion, ćwiczenia na stabilizację tułowia oraz
+            techniki oddechowe, które mogą pomóc w przygotowaniu do porodu.
+          </Paragraph>
+          <br />
+          <Paragraph>
+            Zajęcia aqua fitness są przyjemnym i bezpiecznym sposobem na
+            utrzymanie zdrowia i dobrej kondycji w czasie ciąży.
+            <br />
+            <span className={styles.bold}>
+              Przyszłe mamy powinny jednak zawsze skonsultować się z lekarzem
+              przed rozpoczęciem jakiejkolwiek aktywności fizycznej.
+            </span>
+          </Paragraph>
         </TextWithImage>
         <div>
           <div className={styles.topWrapper}>
