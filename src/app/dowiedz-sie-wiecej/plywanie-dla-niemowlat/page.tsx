@@ -1,5 +1,9 @@
 import { List } from "../../../features/infoPage/list";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
+import {
+  FileLinksWrapper,
+  FileLink,
+} from "../../../features/shared/fileLink/fileLink";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
 
@@ -84,6 +88,14 @@ export default function Page() {
               <Paragraph className={styles.red}>
                 Realizujemy wyłącznie w przychodni Zdrowa Rodzina
               </Paragraph>
+              <FileLinksWrapper>
+                <FileLink fileName="harmonogram_szkoła_pływania.pdf">
+                  Harmonogram
+                </FileLink>
+                <FileLink fileName="grafik_szkoła_pływania.docx">
+                  Grafik
+                </FileLink>
+              </FileLinksWrapper>
             </div>
           </div>
         </div>

@@ -3,6 +3,10 @@ import { TextWithImage } from "../../../features/infoPage/textWithImage";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
 import { List } from "../../../features/infoPage/list";
+import {
+  FileLinksWrapper,
+  FileLink,
+} from "../../../features/shared/fileLink/fileLink";
 
 const imageProps = {
   src: "/assets/plywanie-dla-niemowlat-cover.png",
@@ -106,6 +110,13 @@ export default function Page() {
               przez biuro.
             </Paragraph>
           </div>
+
+          <FileLinksWrapper>
+            <FileLink fileName="harmonogram_szkoła_pływania.pdf">
+              Harmonogram
+            </FileLink>
+            <FileLink fileName="grafik_szkoła_pływania.docx">Grafik</FileLink>
+          </FileLinksWrapper>
         </div>
       </div>
     </div>
