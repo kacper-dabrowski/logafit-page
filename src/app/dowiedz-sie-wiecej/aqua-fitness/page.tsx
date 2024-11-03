@@ -1,4 +1,8 @@
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
+import {
+  FileLink,
+  FileLinksWrapper,
+} from "../../../features/shared/fileLink/fileLink";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
 
@@ -81,6 +85,14 @@ export default function Page() {
                     Karnet miesięczny (open) - 30 zł za wejście
                   </Paragraph>
                 </li>
+                <FileLinksWrapper>
+                  <FileLink fileName="regulamin_aqua_fitness.pdf">
+                    Regulamin
+                  </FileLink>
+                  <FileLink fileName="grafik_aqua_fitness.docx">
+                    Grafik
+                  </FileLink>
+                </FileLinksWrapper>
               </ul>
             </div>
           </div>

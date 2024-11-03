@@ -10,7 +10,6 @@ import { HealthTours } from "./healthTours/healthTours";
 
 const eventPages: Record<Tab, JSX.Element> = {
   [Tab.Camps]: <Camps />,
-  // [Tab.Courses]: <Courses />,
   [Tab.HealthTours]: <HealthTours />,
 };
 

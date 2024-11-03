@@ -18,3 +18,7 @@ export function FileLink({
     </Link>
   );
 }
+
+export function FileLinksWrapper({ children }: PropsWithChildren) {
+  return <div className={styles.fileLinksWrapper}>{children}</div>;
+}
