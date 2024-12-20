@@ -1,28 +1,32 @@
-import {
-  ContentfulClientApi,
-  createClient,
-  EntryCollection,
-  EntrySkeletonType,
-} from "contentful";
-import { EntryTransformer } from "../entryTransformer";
+import { ContentfulClientApi, createClient } from "contentful";
+import { CacheService } from "../../../shared/cache/cache";
+import { InMemoryCacheService } from "../../../shared/cache/inMemory";
+
+export enum AvailableEntity {
+  FeaturedVenues = "featuredVenue",
+}
 
 export class ContentfulClientService {
   private client: ContentfulClientApi<undefined>;
 
-  private entries?: EntryCollection<EntrySkeletonType, undefined, string>;
-
-  constructor() {
+  constructor(private cacheService: CacheService) {
     this.client = createClient({
       space: process.env.CONTENTFUL_SPACE_ID || "",
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
     });
   }
 
-  async getEntries(transformer: EntryTransformer<unknown>) {
-    if (!this.entries) {
-      this.entries = await this.client.getEntries();
-    }
+  async getEntries(name: AvailableEntity): Promise<unknown[]> {
+    return this.cacheService.wrap(name, () => this.fetchEntries(name));
+  }
 
-    return this.entries.items.map((entry) => transformer.transform(entry));
+  private async fetchEntries(name: AvailableEntity): Promise<unknown[]> {
+    const response = await this.client.getEntries({ content_type: name });
+
+    return response.items.map((item) => item.fields);
   }
 }
+
+export const contentfulClientService = new ContentfulClientService(
+  new InMemoryCacheService(),
+);

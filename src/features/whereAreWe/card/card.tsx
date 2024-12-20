@@ -5,18 +5,26 @@ import styles from "./card.module.scss";
 interface WhereAreWeCardProps {
   image: string | StaticImageData;
   name: string;
-  variant: "lightBlue" | "red" | "yellow" | "green";
+  textColor: string;
+  backgroundColor: string;
 }
 
-export function WhereAreWeCard({ image, name, variant }: WhereAreWeCardProps) {
-  const containerClassNames = clsx(styles.container, styles[variant]);
+export function WhereAreWeCard({
+  image,
+  name,
+  textColor,
+  backgroundColor,
+}: WhereAreWeCardProps) {
+  const containerClassNames = clsx(styles.container);
 
   return (
-    <div className={containerClassNames}>
+    <div className={containerClassNames} style={{ backgroundColor }}>
       <div className={styles.imageWrapper}>
         <Image width={270} height={200} src={image} alt={name} />
       </div>
-      <p className={styles.text}>{name}</p>
+      <p className={styles.text} style={{ color: textColor }}>
+        {name}
+      </p>
     </div>
   );
 }

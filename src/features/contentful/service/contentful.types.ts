@@ -25,8 +25,7 @@ export const imageMetaSchema = z.object({
         }),
       }),
       url: z.string(),
-      title: z.string(),
-      description: z.string(),
+      fileName: z.string(),
     }),
   }),
 });

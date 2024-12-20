@@ -2,11 +2,7 @@ import { z } from "zod";
 
 const defaultSchema = z.unknown();
 
-export interface EntryTransformer<T> {
-  transform(entry: unknown): T;
-}
-
-export class DefaultEntryTransformer<T> implements EntryTransformer<T> {
+export class EntryTransformer<T> {
   private schema: z.ZodTypeAny;
 
   constructor(schema: z.ZodTypeAny = defaultSchema) {
@@ -18,10 +14,14 @@ export class DefaultEntryTransformer<T> implements EntryTransformer<T> {
 
     if (!validationResult.success) {
       throw new Error(
-        `Error occurred, when tried to parse entry ${JSON.stringify(validationResult.error.errors)}`,
+        `Error occurred, when tried to parse entry ${JSON.stringify(validationResult.error.errors)}, object: ${JSON.stringify(entry)}`,
       );
     }
 
     return validationResult.data;
+  }
+
+  transformMany(entries: unknown[]): T[] {
+    return entries.map((entry) => this.transform(entry));
   }
 }

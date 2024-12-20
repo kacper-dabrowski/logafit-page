@@ -1,14 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import { WhereAreWe } from "./whereAreWe";
+import { fakeFeaturedVenue } from "../contentful/featuredVenues/featuredVenue.fixture";
 
 describe("where are we section", () => {
   it("should render the where are we section", () => {
-    render(<WhereAreWe />);
+    render(
+      <WhereAreWe
+        entries={[
+          { ...fakeFeaturedVenue, name: "Venue" },
+          { ...fakeFeaturedVenue, name: "Another venue" },
+        ]}
+      />,
+    );
 
-    expect(screen.getByText("Basen Hotel Copernicus")).toBeInTheDocument();
-    expect(screen.getByText("Aqua Toruń Bażyńskich")).toBeInTheDocument();
-    expect(screen.getByText("Olender Wielka Nieszawka")).toBeInTheDocument();
-    expect(screen.getByText("Mini Aqua Park Hallera")).toBeInTheDocument();
-    expect(screen.getByText("Skontaktuj się z nami")).toBeInTheDocument();
+    expect(screen.getByText("Miejsca realizacji zajęć")).toBeInTheDocument();
+    expect(screen.getByText("Venue")).toBeInTheDocument();
+    expect(screen.getByText("Another venue")).toBeInTheDocument();
+    expect(screen.getByAltText("Venue")).toBeInTheDocument();
+    expect(screen.getByAltText("Another venue")).toBeInTheDocument();
   });
 });
