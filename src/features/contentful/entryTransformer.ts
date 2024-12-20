@@ -2,7 +2,12 @@ import { z } from "zod";
 
 const defaultSchema = z.unknown();
 
-export class EntryTransformer<T> {
+export interface EntityTransformer<T> {
+  transform(entry: unknown): T;
+  transformMany(entries: unknown[]): T[];
+}
+
+export class SchemaBasedEntityTransformer<T> implements EntityTransformer<T> {
   private schema: z.ZodTypeAny;
 
   constructor(schema: z.ZodTypeAny = defaultSchema) {

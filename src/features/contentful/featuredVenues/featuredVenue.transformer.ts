@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EntryTransformer } from "../entryTransformer";
+import { SchemaBasedEntityTransformer } from "../entryTransformer";
 import { ImageMeta, imageMetaSchema } from "../service/contentful.types";
 
 export interface FeaturedVenue {
@@ -16,6 +16,5 @@ const featuredVenueSchema = z.object({
   image: imageMetaSchema,
 });
 
-export const featuredVenueTransformer = new EntryTransformer<FeaturedVenue>(
-  featuredVenueSchema,
-);
+export const featuredVenueTransformer =
+  new SchemaBasedEntityTransformer<FeaturedVenue>(featuredVenueSchema);

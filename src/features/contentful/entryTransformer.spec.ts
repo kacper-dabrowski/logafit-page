@@ -1,10 +1,10 @@
 import { z } from "zod";
-import { EntryTransformer } from "./entryTransformer";
+import { SchemaBasedEntityTransformer } from "./entryTransformer";
 
 const schema = z.object({ required: z.string() });
 
 describe("Entry transformer", () => {
-  const transformer = new EntryTransformer(schema);
+  const transformer = new SchemaBasedEntityTransformer(schema);
 
   it("should throw, when entry does not match schema", () => {
     expect(() => transformer.transform("sth")).toThrow();
