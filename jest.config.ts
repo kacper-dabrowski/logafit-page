@@ -16,7 +16,7 @@ const config: Config = {
     "default",
     [
       "jest-ctrf-json-reporter",
-      { outputFile: "results.json", outputDir: "test-results" },
+      { outputFile: "summary.json", outputDir: "test-results" },
     ],
   ],
 };

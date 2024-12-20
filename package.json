@@ -15,7 +15,8 @@
     "checks": "npm run format && npm run lint && npm run style:lint && npm run test",
     "fix": "npm run format:fix && npm run lint:fix && npm run style:lint:fix",
     "commit": "cz",
-    "test": "jest"
+    "test": "jest",
+    "report": "github-actions-ctrf pull-request test-results/summary.json"
   },
   "dependencies": {
     "@vercel/analytics": "^1.3.1",
