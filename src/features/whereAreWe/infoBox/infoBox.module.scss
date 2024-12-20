@@ -1,0 +1,69 @@
+@import "../../../shared/styles/variables/breakpoints.scss";
+
+.infoBox {
+  width: auto;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 0;
+  white-space: nowrap;
+
+  @media (min-width: $screen-lg) {
+    padding: 8px 24px;
+    font-size: 18px;
+  }
+
+  position: relative;
+  text-align: center;
+
+  --color-primary: transparent;
+  --color-secondary: transparent;
+  --gradient-radius: 180deg;
+
+  &.green {
+    --color-primary-dark: #2e893e;
+    --color-primary: #8ece42;
+    --color-secondary: #8fe2d2;
+  }
+
+  &.blue {
+    --color-primary-dark: #5e53a1;
+    --color-primary: #8174d7;
+    --color-secondary: #68ceff;
+    --gradient-radius: 90deg;
+  }
+
+  &.lime {
+    --color-primary-dark: #83c52c;
+    --color-primary: #a0f434;
+    --color-secondary: #f4ca34;
+    --gradient-radius: 90deg;
+  }
+
+  &.skyBlue {
+    --color-primary-dark: #37335d;
+    --color-primary: #3296e4;
+    --color-secondary: #a6e2ff;
+    --gradient-radius: 180deg;
+  }
+
+  border: 8px solid transparent;
+  border-radius: 25px;
+  background:
+    linear-gradient(#dfedf5, #dfedf5) padding-box,
+    linear-gradient(
+        var(--gradient-radius),
+        var(--color-primary) 0%,
+        var(--color-secondary) 100%
+      )
+      border-box;
+
+  span {
+    margin: 5px;
+    font-weight: bold;
+  }
+
+  .textColor {
+    color: var(--color-primary-dark);
+    font-size: 28px;
+  }
+}
