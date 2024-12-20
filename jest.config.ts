@@ -11,6 +11,14 @@ const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  coverageDirectory: "test-results/coverage",
+  reporters: [
+    "default",
+    [
+      "jest-ctrf-json-reporter",
+      { outputFile: "results.json", outputDir: "test-results" },
+    ],
+  ],
 };
 
 export default createJestConfig(config);
