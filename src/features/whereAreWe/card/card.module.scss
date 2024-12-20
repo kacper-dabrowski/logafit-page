@@ -5,33 +5,7 @@
   justify-content: center;
   border-radius: 20px;
 
-  --background-color: transparent;
-  --text-color: black;
-
-  &.yellow {
-    --text-color: #806300;
-    --background-color: #ffd74b;
-  }
-
-  &.red {
-    --text-color: #600;
-    --background-color: #ff4b4b;
-  }
-
-  &.lightBlue {
-    --text-color: #006980;
-    --background-color: #4bdfff;
-  }
-
-  &.green {
-    --background-color: #29ea6b;
-    --text-color: #086600;
-  }
-
-  background-color: var(--background-color);
-
   .text {
-    color: var(--text-color);
     width: 200px;
     padding: 20px;
     font-size: 20px;
