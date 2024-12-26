@@ -4,6 +4,7 @@ import { InMemoryCacheService } from "../../../shared/cache/inMemory";
 
 export enum AvailableEntity {
   FeaturedVenues = "featuredVenue",
+  CompanyDetails = "contact",
 }
 
 export class ContentfulClientService {

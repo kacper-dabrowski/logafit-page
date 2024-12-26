@@ -1,20 +1,31 @@
 @import "../../../shared/styles/variables/breakpoints.scss";
 
 .text {
-  line-height: 16px;
-  font-size: 9px;
+  text-wrap: nowrap;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 32px;
+}
 
-  @media (min-width: $screen-lg) {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
-  }
+.wrapper {
+  width: min-content;
+  margin: 10px;
+}
+
+.wrapper:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.wrapper:last-of-type {
+  margin-bottom: 0;
 }
 
 .container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20%;
   align-items: center;
+  margin-bottom: 30px;
 }

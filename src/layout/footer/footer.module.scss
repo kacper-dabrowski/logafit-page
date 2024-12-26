@@ -1,5 +1,9 @@
 @import "../../shared/styles/variables/breakpoints.scss";
 
+.centered {
+  text-align: center;
+}
+
 .footer {
   background-color: #0d1606;
   color: #f6fbf2;
@@ -11,9 +15,10 @@
 }
 
 .iconsWrapper {
-  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 30px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
