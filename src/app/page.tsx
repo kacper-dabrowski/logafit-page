@@ -13,7 +13,9 @@ export default async function Home() {
   const entries = await contentfulClientService.getEntries(
     AvailableEntity.FeaturedVenues,
   );
-  const featuredVenues = featuredVenueTransformer.transformMany(entries);
+  const featuredVenues = featuredVenueTransformer
+    .transformMany(entries)
+    .sort((a, b) => a.order - b.order);
 
   return (
     <div>

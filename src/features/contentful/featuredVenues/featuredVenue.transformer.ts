@@ -7,6 +7,7 @@ export interface FeaturedVenue {
   backgroundColor: string;
   textColor: string;
   image: ImageMeta;
+  order: number;
 }
 
 const featuredVenueSchema = z.object({
@@ -14,6 +15,7 @@ const featuredVenueSchema = z.object({
   backgroundColor: z.string(),
   textColor: z.string(),
   image: imageMetaSchema,
+  order: z.number(),
 });
 
 export const featuredVenueTransformer =

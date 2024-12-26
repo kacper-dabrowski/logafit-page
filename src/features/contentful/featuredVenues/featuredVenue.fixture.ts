@@ -1,6 +1,7 @@
 import { FeaturedVenue } from "./featuredVenue.transformer";
 
 export const fakeFeaturedVenue: FeaturedVenue = {
+  order: 1,
   name: "",
   backgroundColor: "#fff",
   textColor: "#000",
