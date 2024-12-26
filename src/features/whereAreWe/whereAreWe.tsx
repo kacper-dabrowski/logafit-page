@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import emailContact from "../../../public/assets/recruitment_contact_mail.png";
+import phoneContact from "../../../public/assets/recruitment_contact_phone.png";
+import { FeaturedVenue } from "../contentful/featuredVenues/featuredVenue.transformer";
 import { PrimaryHeader } from "../shared/typography/headers";
 import { WhereAreWeCard } from "./card/card";
 import styles from "./whereAreWe.module.scss";
-import olenderPhoto from "../../../public/assets/olender.png";
-import bazynskichPhoto from "../../../public/assets/bazynskich.png";
-import copernicusHotelPhoto from "../../../public/assets/hotel_copernicus.png";
-import halleraPhoto from "../../../public/assets/basen_hallera.avif";
-import phoneContact from "../../../public/assets/recruitment_contact_phone.png";
-import emailContact from "../../../public/assets/recruitment_contact_mail.png";
 
-export function WhereAreWe() {
+interface WhereAreWeProps {
+  entries: FeaturedVenue[];
+}
+
+export function WhereAreWe({ entries }: WhereAreWeProps) {
   return (
     <div className={styles.container}>
       <div className={styles.headings}>
@@ -19,26 +20,15 @@ export function WhereAreWe() {
         </PrimaryHeader>
       </div>
       <div className={styles.wrapper}>
-        <WhereAreWeCard
-          image={copernicusHotelPhoto}
-          name="Basen Hotel Copernicus"
-          variant="lightBlue"
-        />
-        <WhereAreWeCard
-          image={bazynskichPhoto}
-          name="Aqua Toruń Bażyńskich"
-          variant="red"
-        />
-        <WhereAreWeCard
-          image={olenderPhoto}
-          name="Olender Wielka Nieszawka"
-          variant="green"
-        />
-        <WhereAreWeCard
-          image={halleraPhoto}
-          name="Mini Aqua Park Hallera"
-          variant="yellow"
-        />
+        {entries.map((entry) => (
+          <WhereAreWeCard
+            image={`https:${entry.image.fields.file.url}`}
+            name={entry.name}
+            key={entry.name}
+            backgroundColor={entry.backgroundColor}
+            textColor={entry.textColor}
+          />
+        ))}
       </div>
       <h2 className={styles.secondLevelHeading}>Skontaktuj się z nami</h2>
       <div className={styles.contact}>
