@@ -57,12 +57,14 @@
       )
       border-box;
 
-  span {
+  .textBlack {
     margin: 5px;
     font-weight: bold;
   }
 
   .textColor {
+    margin: 5px;
+    font-weight: bold;
     color: var(--color-primary-dark);
     font-size: 28px;
   }
