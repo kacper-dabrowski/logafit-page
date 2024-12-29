@@ -1,6 +1,4 @@
 import Link from "next/link";
-import emailContact from "../../../public/assets/recruitment_contact_mail.png";
-import phoneContact from "../../../public/assets/recruitment_contact_phone.png";
 import { FeaturedVenue } from "../contentful/featuredVenues/featuredVenue.transformer";
 import { PrimaryHeader } from "../shared/typography/headers";
 import { WhereAreWeCard } from "./card/card";
