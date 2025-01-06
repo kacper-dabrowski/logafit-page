@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
@@ -9,6 +11,14 @@ interface NavbarProps {
 
 export function Navbar({ additionalClasses }: NavbarProps) {
   const classes = clsx(styles.navbar, additionalClasses);
+
+  const handleScroll = (event: React.FormEvent<EventTarget>, id: string) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className={classes}>
@@ -24,17 +34,29 @@ export function Navbar({ additionalClasses }: NavbarProps) {
       </Link>
       <ul className={styles.items}>
         <li className={styles.item}>
-          <Link href="/#oferta" aria-label="oferta">
+          <Link
+            href="/#oferta"
+            aria-label="oferta"
+            onClick={(event) => handleScroll(event, "oferta")}
+          >
             Oferta
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/#o-nas" aria-label="o nas">
+          <Link
+            href="/#o-nas"
+            aria-label="o nas"
+            onClick={(event) => handleScroll(event, "o-nas")}
+          >
             O nas
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="/#kontakt" aria-label="kontakt">
+          <Link
+            href="/#kontakt"
+            aria-label="kontakt"
+            onClick={(event) => handleScroll(event, "kontakt")}
+          >
             Kontakt
           </Link>
         </li>
