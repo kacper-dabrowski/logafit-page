@@ -12,7 +12,7 @@ export function PrimaryHeader({
   id,
   classNames,
 }: React.PropsWithChildren<FocusableByLink>) {
-  const headerClasses = clsx(styles.secondary, classNames);
+  const headerClasses = clsx(styles.primary, classNames);
 
   return (
     <h1 id={id} className={headerClasses}>

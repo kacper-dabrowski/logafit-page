@@ -23,6 +23,7 @@ export function InfoIcon({
   target = LinkTarget.Current,
 }: InfoIconProps) {
   const iconClasses = clsx(styles.image);
+
   return (
     <a
       className={styles.link}
@@ -33,8 +34,8 @@ export function InfoIcon({
       <div className={styles.infoIcon}>
         <ResponsiveImage
           src={imgSrc}
-          width={{ mobile: 12, desktop: 24 }}
-          height={{ mobile: 12, desktop: 24 }}
+          width={{ mobile: 24, desktop: 24 }}
+          height={{ mobile: 24, desktop: 24 }}
           mobileClassNames={iconClasses}
           desktopClassNames={iconClasses}
           alt={imgAlt}

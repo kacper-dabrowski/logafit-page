@@ -2,12 +2,19 @@ import { ContactInfo } from "../../features/contact/info/contactInfo";
 import { InfoIcon, LinkTarget } from "../../features/contact/icon/infoIcon";
 import { PrimaryHeader } from "../../features/shared/typography/headers";
 import styles from "./footer.module.scss";
+import { CompanyData } from "../../features/contentful/companyData/companyData.transformer";
 
-export function Footer() {
+interface FooterProps {
+  companyDataList: CompanyData[];
+}
+
+export function Footer({ companyDataList }: FooterProps) {
   return (
     <div className={styles.footer}>
-      <PrimaryHeader id="kontakt">Kontakt</PrimaryHeader>
-      <ContactInfo />
+      <PrimaryHeader id="kontakt" classNames={styles.centered}>
+        Kontakt
+      </PrimaryHeader>
+      <ContactInfo companyDataList={companyDataList} />
       <div className={styles.iconsWrapper}>
         <InfoIcon
           href="tel:691-376-287"
