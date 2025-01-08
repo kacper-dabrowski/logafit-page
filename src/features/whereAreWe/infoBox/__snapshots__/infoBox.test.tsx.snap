@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`infoBox section injects a separator in a separate element 1`] = `
+<div
+  className="infoBox green"
+>
+  <div>
+    <span
+      className="textColor"
+    >
+      607 880 086 
+    </span>
+    <span
+      className="textBlack"
+    >
+      oraz
+    </span>
+    <span
+      className="textColor"
+    >
+       691 376 287
+    </span>
+  </div>
+</div>
+`;
