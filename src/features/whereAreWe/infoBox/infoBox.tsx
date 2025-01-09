@@ -10,20 +10,16 @@ interface InfoBoxProps {
 
 export function InfoBox({ text, variant, separator }: InfoBoxProps) {
   const classes = clsx(styles.infoBox, styles[variant]);
-  let textA;
-  if (separator) {
-    textA = text.split(separator);
-  } else {
-    textA = [text];
-  }
+  const dividedText = separator ? text.split(separator) : [text];
+
   return (
     <div className={classes}>
       <div>
-        {textA.map((content, index) => {
+        {dividedText.map((content, index) => {
           return (
             <React.Fragment key={content}>
               <span className={styles.textColor}>{content}</span>
-              {index < textA.length - 1 && (
+              {index < dividedText.length - 1 && (
                 <span className={styles.textBlack}>{separator}</span>
               )}
             </React.Fragment>
