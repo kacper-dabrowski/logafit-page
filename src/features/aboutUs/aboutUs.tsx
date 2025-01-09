@@ -3,8 +3,13 @@ import Link from "next/link";
 import { GradientHeader, PrimaryHeader } from "../shared/typography/headers";
 import styles from "./aboutUs.module.scss";
 import { Locations } from "./locations/locations";
+import { ServiceLocation } from "../contentful/serviceLocations/serviceLocations.transformer";
 
-export function AboutUs() {
+interface AboutUsProps {
+  locations: ServiceLocation[];
+}
+
+export function AboutUs({ locations }: AboutUsProps) {
   return (
     <div className={styles.container}>
       <div className={styles.background} />
@@ -76,7 +81,7 @@ export function AboutUs() {
           </Link>
         </div>
         <div>
-          <Locations />
+          <Locations locations={locations} />
         </div>
       </div>
     </div>
