@@ -6,6 +6,7 @@
 }
 
 .pinsWrapper {
+  min-height: max-content;
   margin-top: 15px;
   display: grid;
   grid-template-rows: 1fr 1fr;
