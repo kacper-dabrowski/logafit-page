@@ -5,6 +5,7 @@ import {
   contentfulClientService,
 } from "../features/contentful/service/service";
 import { serviceLocationsTransformer } from "../features/contentful/serviceLocations/serviceLocations.transformer";
+import { byOrder } from "../features/contentful/sorting/sorting";
 import { Offer } from "../features/offer/offer";
 import { WhereAreWe } from "../features/whereAreWe/whereAreWe";
 import { Header } from "../layout/header/header";
@@ -17,11 +18,13 @@ export default async function Home() {
 
   const featuredVenues = featuredVenueTransformer
     .transformMany(featuredVenuesEntries)
-    .sort((a, b) => a.order - b.order);
+    .sort(byOrder);
 
-  const availableLocations = serviceLocationsTransformer.transformMany(
-    await contentfulClientService.getEntries(AvailableEntity.Locations),
-  );
+  const availableLocations = serviceLocationsTransformer
+    .transformMany(
+      await contentfulClientService.getEntries(AvailableEntity.Locations),
+    )
+    .sort(byOrder);
 
   return (
     <div>
