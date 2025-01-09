@@ -4,18 +4,24 @@ import {
   AvailableEntity,
   contentfulClientService,
 } from "../features/contentful/service/service";
+import { serviceLocationsTransformer } from "../features/contentful/serviceLocations/serviceLocations.transformer";
 import { Offer } from "../features/offer/offer";
 import { WhereAreWe } from "../features/whereAreWe/whereAreWe";
 import { Header } from "../layout/header/header";
 import styles from "./page.module.scss";
 
 export default async function Home() {
-  const entries = await contentfulClientService.getEntries(
+  const featuredVenuesEntries = await contentfulClientService.getEntries(
     AvailableEntity.FeaturedVenues,
   );
+
   const featuredVenues = featuredVenueTransformer
-    .transformMany(entries)
+    .transformMany(featuredVenuesEntries)
     .sort((a, b) => a.order - b.order);
+
+  const availableLocations = serviceLocationsTransformer.transformMany(
+    await contentfulClientService.getEntries(AvailableEntity.Locations),
+  );
 
   return (
     <div>
@@ -27,7 +33,7 @@ export default async function Home() {
           <WhereAreWe entries={featuredVenues} />
         </div>
       </div>
-      <AboutUs />
+      <AboutUs locations={availableLocations} />
     </div>
   );
 }
