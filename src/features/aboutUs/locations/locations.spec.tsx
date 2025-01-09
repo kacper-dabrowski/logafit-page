@@ -8,11 +8,13 @@ const locationsFixture: ServiceLocation[] = [
     category: "categoryA",
     title: "locationAInCategoryA",
     list: ["locationA", "phoneNumberA"],
+    order: 1,
   },
   {
     category: "categoryA",
     title: "locationBInCategoryA",
     list: ["locationB", "phoneNumberB"],
+    order: 1,
   },
 ];
 
@@ -35,6 +37,7 @@ describe("rendering locations", () => {
             category: "categoryB",
             title: "locationAInCategoryB",
             list: ["newLocation", "newPhoneNumber"],
+            order: 2,
           },
         ]}
       />,
@@ -51,5 +54,26 @@ describe("rendering locations", () => {
 
     expect(screen.queryByText("locationA")).not.toBeInTheDocument();
     expect(screen.queryByText("phoneNumberA")).not.toBeInTheDocument();
+  });
+
+  it("should respect the order property", () => {
+    render(
+      <Locations
+        locations={[
+          ...locationsFixture,
+          {
+            category: "categoryB",
+            title: "locationAInCategoryB",
+            list: ["newLocation", "newPhoneNumber"],
+            order: 2,
+          },
+        ]}
+      />,
+    );
+
+    const [firstButton, secondButton] = screen.getAllByRole("button");
+
+    expect(firstButton).toHaveTextContent("categoryA");
+    expect(secondButton).toHaveTextContent("categoryB");
   });
 });
