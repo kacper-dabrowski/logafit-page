@@ -58,10 +58,11 @@
       border-box;
 
   .textBlack {
-    margin: 5px;
+    margin-top: 5px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
+    vertical-align: top;
   }
 
   .textColor {
@@ -71,6 +72,8 @@
     font-size: 23px;
     text-align: center;
     word-wrap: break-word;
+    vertical-align: top;
+    display: inline-block;
 
     @media (min-width: $screen-lg) {
       font-size: 28px;
