@@ -1,6 +1,7 @@
 "use client";
 
 import { PrimaryHeader } from "@/features/shared/typography/headers";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
 
@@ -26,6 +27,12 @@ const headings: Record<Tab, string> = {
   [Tab.PhysicalTherapy]: "Zapisz siebie lub swoje dziecko na zajęcia",
   [Tab.Camps]: "",
   [Tab.HealthTours]: "",
+};
+
+const variants = {
+  enter: { opacity: 0, x: -2000, delay: 0.65 },
+  center: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 1000 },
 };
 
 export function Offer() {
@@ -58,7 +65,20 @@ export function Offer() {
         </OfferButton>
       </div>
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
-      <div>{cards[activeTab]}</div>
+      <div className={styles.animationWrapper}>
+        <AnimatePresence>
+          <motion.div
+            key={activeTab}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          >
+            {cards[activeTab]}
+          </motion.div>
+        </AnimatePresence>
+      </div>
       <div className={styles.hidden}>
         {Object.values(cards).map((value) => value)}
       </div>
