@@ -61,8 +61,8 @@
     margin-top: 5px;
     font-weight: bold;
     text-align: center;
-    display: inline-block;
     vertical-align: top;
+    min-width: 50px;
   }
 
   .textColor {
@@ -73,10 +73,19 @@
     text-align: center;
     word-wrap: break-word;
     vertical-align: top;
-    display: inline-block;
 
     @media (min-width: $screen-lg) {
       font-size: 28px;
+    }
+  }
+
+  .wrapperInfoBox {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
     }
   }
 }

@@ -14,7 +14,7 @@ export function InfoBox({ text, variant, separator }: InfoBoxProps) {
 
   return (
     <div className={classes}>
-      <div>
+      <div className={styles.wrapperInfoBox}>
         {dividedText.map((content, index) => {
           return (
             <React.Fragment key={content}>

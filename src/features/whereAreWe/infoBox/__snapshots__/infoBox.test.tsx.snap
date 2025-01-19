@@ -5,7 +5,9 @@ exports[`infoBox section handles missing optional separator prop 1`] = `
   <div
     class="infoBox green"
   >
-    <div>
+    <div
+      class="wrapperInfoBox"
+    >
       <span
         class="textColor"
       >
@@ -21,7 +23,9 @@ exports[`infoBox section injects a separator in a separate element 1`] = `
   <div
     class="infoBox green"
   >
-    <div>
+    <div
+      class="wrapperInfoBox"
+    >
       <span
         class="textColor"
       >
