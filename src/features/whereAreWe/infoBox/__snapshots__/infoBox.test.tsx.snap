@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`infoBox section handles missing optional separator prop 1`] = `
+<div>
+  <div
+    class="infoBox green"
+  >
+    <div
+      class="wrapperInfoBox"
+    >
+      <span
+        class="textColor"
+      >
+        607 880 086 oraz 691 376 287
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`infoBox section injects a separator in a separate element 1`] = `
+<div>
+  <div
+    class="infoBox green"
+  >
+    <div
+      class="wrapperInfoBox"
+    >
+      <span
+        class="textColor"
+      >
+        607 880 086 
+      </span>
+      <span
+        class="textBlack"
+      >
+        oraz
+      </span>
+      <span
+        class="textColor"
+      >
+         691 376 287
+      </span>
+    </div>
+  </div>
+</div>
+`;
