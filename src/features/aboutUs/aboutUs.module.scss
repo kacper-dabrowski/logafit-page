@@ -46,3 +46,11 @@
   gap: 15px;
   justify-content: center;
 }
+
+.contactDataContainer > a {
+  width: 90%;
+
+  @media (min-width: $screen-md) {
+    width: inherit;
+  }
+}
