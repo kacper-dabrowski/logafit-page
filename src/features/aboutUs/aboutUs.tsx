@@ -4,6 +4,7 @@ import { GradientHeader, PrimaryHeader } from "../shared/typography/headers";
 import styles from "./aboutUs.module.scss";
 import { Locations } from "./locations/locations";
 import { ServiceLocation } from "../contentful/serviceLocations/serviceLocations.transformer";
+import { InfoBox } from "./infoBox/infoBox";
 
 interface AboutUsProps {
   locations: ServiceLocation[];
@@ -56,27 +57,20 @@ export function AboutUs({ locations }: AboutUsProps) {
         <GradientHeader variant="green">Zarejestruj się</GradientHeader>
         <div className={styles.contactDataContainer}>
           <a href="tel:607880086">
-            <Image
-              src="/assets/sign-phone.png"
-              width={345}
-              height={140}
-              alt="607880086"
-            />
+            <InfoBox title="Telefonicznie" text="607 880 086" variant="green" />
           </a>
           <a href="mailto:biuro@logafit.pl">
-            <Image
-              src="/assets/sign-mail.png"
-              width={345}
-              height={140}
-              alt="biuro@logafit.pl"
+            <InfoBox
+              title="Mailowo"
+              text="biuro@logafit.pl"
+              variant="darkblue"
             />
           </a>
           <Link href="/zapisz-sie">
-            <Image
-              src="/assets/sign-form.png"
-              width={345}
-              height={140}
-              alt="zapisz się przez formularz"
+            <InfoBox
+              title="Poprzez formularz"
+              text="Zapisz się ->"
+              variant="blue"
             />
           </Link>
         </div>

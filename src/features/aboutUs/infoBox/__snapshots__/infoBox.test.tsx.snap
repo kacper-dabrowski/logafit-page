@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`infoBox section infoBox has the correct structure 1`] = `
+<div>
+  <div
+    class="infoBox green"
+  >
+    <div>
+      <span
+        class="textBlack"
+      >
+        Telefonicznie
+      </span>
+      <span
+        class="textColor"
+      >
+        607 880 086
+      </span>
+    </div>
+  </div>
+</div>
+`;
