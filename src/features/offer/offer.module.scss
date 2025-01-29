@@ -33,3 +33,42 @@
     font-weight: 600;
   }
 }
+
+.animationWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.normal {
+  min-height: 470px;
+  height: max-content;
+
+  @media (min-width: $screen-lg) {
+    min-height: 570px;
+  }
+
+  @media (min-width: $screen-xl) {
+    min-height: 400px;
+  }
+}
+
+.expanded {
+  min-height: 770px;
+  height: max-content;
+
+  @media (min-width: $screen-lg) {
+    min-height: 950px;
+  }
+
+  @media (min-width: $screen-xl) {
+    min-height: 650px;
+  }
+}
+
+.animationWrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
