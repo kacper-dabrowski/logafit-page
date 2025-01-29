@@ -65,7 +65,9 @@ export function Offer() {
         </OfferButton>
       </div>
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
-      <div className={styles.animationWrapper}>
+      <div
+        className={`${styles.animationWrapper} ${activeTab === Tab.Camps ? styles.expanded : styles.normal}`}
+      >
         <AnimatePresence>
           <motion.div
             key={activeTab}
