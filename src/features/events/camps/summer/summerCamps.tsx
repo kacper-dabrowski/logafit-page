@@ -4,12 +4,13 @@ export function SummerCamps() {
   return (
     <>
       <EventCard
-        title="Półkolonie pływackie"
+        title="Wakacje w mieście - półkolonie pływackie"
         imageSrc="/assets/kids-having-fun.png"
         imageAlt="dzieci z napojami"
         renderDates={() => (
           <p>
-            I- 1-5.07.2024 <br /> II – 8-12.07.2024
+            I- 30 czerwca – 4 lipca 2025 <br /> II- 7 – 11 lipca 2025
+            <br /> III- 4 – 8 sierpnia 2025
           </p>
         )}
         renderLocation={() => (
@@ -24,40 +25,38 @@ export function SummerCamps() {
           </p>
         )}
         type="summer"
+        detailsUrl="https://assets.ctfassets.net/t01f4dq06ywt/6jb3jaKrQtlPg23mbwezcB/100e4381d79aca7413d49ef2ce6aef40/P%C3%B3%C5%82kolonie_lato_2025.pdf"
       />
       <EventCard
-        title="Logafit Camp Darłówko"
+        title="Logafit Camp Sudety"
         imageSrc="/assets/kids-having-fun.png"
         imageAlt="dzieci z napojami"
-        renderDates={() => <p>1-8.08.2024</p>}
+        renderDates={() => <p>9-14 sierpnia 2025</p>}
         renderLocation={() => (
           <p>
-            OW Gniewko, <br />
-            Darłówko Wschodnie Słowiańska 26
+            Willa Rudy Czarna Góra, <br /> Region Masyw Śnieżnika - Polska
           </p>
         )}
         renderAge={() => (
           <p>
-            dzieci <br /> w wieku 6 – 12 lat
+            dzieci 9-12 lat <br /> oraz młodzież 13-18 lat
           </p>
         )}
         type="summer"
+        detailsUrl="https://assets.ctfassets.net/t01f4dq06ywt/1ZvoZWCPbl7cNuEhyTRyuR/1499237bf148bf167cff453faf2fa686/CAMP_SUDETY_2025.pdf"
       />
       <EventCard
-        title="Logafit Camp Kamienica"
+        title="Logafit Camp Mikoszewo"
         imageSrc="/assets/kids-having-fun.png"
         imageAlt="dzieci z napojami"
-        renderDates={() => <p>1-8.08.2024</p>}
-        renderLocation={() => (
-          <p>
-            Wioska Surfera, <br /> Kamienica 6, Kamienica
-          </p>
-        )}
+        renderDates={() => <p>17 – 25 lipca 2025</p>}
+        renderLocation={() => <p>Ośrodek wypoczynkowy „Leśny Zakątek”</p>}
         renderAge={() => (
           <p>
-            dzieci <br /> w wieku 6 – 12 lat
+            dzieci 7-11 lat <br /> oraz młodzież 12-18 lat
           </p>
         )}
+        detailsUrl="https://assets.ctfassets.net/t01f4dq06ywt/1d8Q3toUwjvpxsWfgW3QfM/9be3e3ce5da76e53d3fdcd2c6d244559/CAMP_Mikoszewo_25.pdf"
         type="summer"
       />
     </>
