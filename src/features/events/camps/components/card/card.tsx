@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Link from "next/link";
 import {
   CalendarIcon,
   PinIcon,
@@ -17,6 +18,7 @@ interface EventCardProps {
   renderDates: () => JSX.Element;
   renderLocation: () => JSX.Element;
   renderAge: () => JSX.Element;
+  detailsUrl?: string;
 
   type: "winter" | "summer" | "healthTour";
 }
@@ -33,6 +35,7 @@ export function EventCard({
   renderAge,
   renderDates,
   renderLocation,
+  detailsUrl,
 }: EventCardProps) {
   const containerClasses = clsx(styles.card, {
     [styles.blue]: type === "winter",
@@ -48,7 +51,7 @@ export function EventCard({
       <SunIcon color={color} />
     );
 
-  const badgeTitle = type === "winter" ? "Zima 2024" : "Lato 2024";
+  const badgeTitle = type === "winter" ? "Zima 2025" : "Lato 2025";
 
   return (
     <div className={containerClasses}>
@@ -76,16 +79,14 @@ export function EventCard({
               <UserGroupIcon color={color} />
               {renderAge()}
             </div>
+            {detailsUrl ? (
+              <div>
+                <Link href={detailsUrl} className={styles.link} target="_blank">
+                  Szczegóły
+                </Link>
+              </div>
+            ) : null}
           </div>
-        </div>
-        <div className={styles.imageWrapper}>
-          {/* <Image
-            className={styles.image}
-            src={imageSrc}
-            width={202}
-            height={150}
-            alt={imageAlt}
-          /> */}
         </div>
       </div>
     </div>

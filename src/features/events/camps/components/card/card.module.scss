@@ -2,10 +2,15 @@
 
 @mixin card-colors($background-color, $text-color, $badge-background-color) {
   background-color: $background-color;
-  color: $text-color;
+  color: $text-color !important;
 
   .badge {
     background-color: $badge-background-color;
+  }
+
+  .link {
+    color: $text-color;
+    font-weight: 600;
   }
 }
 
