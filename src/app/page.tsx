@@ -1,4 +1,5 @@
 import { AboutUs } from "../features/aboutUs/aboutUs";
+import { eventTransformer } from "../features/contentful/events/event.transformer";
 import { featuredVenueTransformer } from "../features/contentful/featuredVenues/featuredVenue.transformer";
 import {
   AvailableEntity,
@@ -26,13 +27,21 @@ export default async function Home() {
     )
     .sort(byOrder);
 
+  const events = await contentfulClientService.getEntries(
+    AvailableEntity.Events,
+  );
+
+  const transformedEvents = eventTransformer
+    .transformMany(events)
+    .sort(byOrder);
+
   return (
     <div>
       <Header />
       <div className={styles.mainWrapper}>
         <div className={styles.background} />
         <div className={styles.wrapper}>
-          <Offer />
+          <Offer events={transformedEvents} />
           <WhereAreWe entries={featuredVenues} />
         </div>
       </div>

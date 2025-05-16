@@ -3,5 +3,4 @@ export enum Tab {
   PhysicalTherapy,
   AquaFitness,
   Camps,
-  HealthTours,
 }

@@ -1,0 +1,58 @@
+.container {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.emojiHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.emoji {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.eventName {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dates {
+  margin-top: 16px;
+  position: relative;
+  display: flex;
+}
+
+.withIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.text {
+  font-size: 16px;
+  max-width: 250px;
+}
+
+.buttonContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
