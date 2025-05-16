@@ -26,4 +26,6 @@ export const eventFixture: Event = {
   dates: ["30 czerwca - 4 lipca 2025"],
   participants: "Participants",
   accentColor: "#000000",
+  slug: "event-name",
+  details: undefined,
 };

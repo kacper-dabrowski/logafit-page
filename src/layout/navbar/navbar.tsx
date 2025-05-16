@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./navbar.module.scss";
 
 interface NavbarProps {
@@ -11,13 +12,20 @@ interface NavbarProps {
 
 export function Navbar({ additionalClasses }: NavbarProps) {
   const classes = clsx(styles.navbar, additionalClasses);
+  const router = useRouter();
 
-  const handleScroll = (event: React.FormEvent<EventTarget>, id: string) => {
+  const handleScroll = async (
+    event: React.FormEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
     event.preventDefault();
     const element = document.getElementById(id);
+
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+
+    router.push(`/#${id}`);
   };
 
   return (

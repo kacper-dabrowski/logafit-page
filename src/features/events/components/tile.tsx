@@ -28,7 +28,7 @@ export function EventTile({ event }: { event: Event }) {
         </WithIcon>
       </div>
       <div className={styles.buttonContainer}>
-        <EventButton />
+        <EventButton event={event} />
       </div>
     </div>
   );

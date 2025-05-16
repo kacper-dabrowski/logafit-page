@@ -1,0 +1,138 @@
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #333;
+  font-family: inherit;
+  line-height: 1.6;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #37335e;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #37335e;
+      border-radius: 2px;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #37335e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #37335e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+  }
+
+  ul > li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: "•";
+      color: #37335e;
+      font-weight: bold;
+      position: absolute;
+      left: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+  }
+
+  ol > li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+    padding-left: 25px;
+    counter-increment: item;
+
+    &::before {
+      content: counter(item) ".";
+      color: #37335e;
+      font-weight: 600;
+      position: absolute;
+      left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  a {
+    color: #4c49c9;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #37335e;
+      text-decoration: none;
+    }
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+    color: #37335e;
+  }
+
+  blockquote {
+    border-left: 4px solid #37335e;
+    padding: 0.8rem 1.2rem;
+    margin: 1.5rem 0;
+    background-color: rgba(55, 51, 94, 0.05);
+    font-style: italic;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+}
