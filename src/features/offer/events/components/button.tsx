@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowIcon } from "../../shared/icons";
+
 import styles from "./button.module.scss";
-import { Event } from "../../contentful/events/event.transformer";
+import { ArrowIcon } from "../../../shared/icons";
+import { Event } from "../../../contentful/events/event.transformer";
 
 export function EventButton({ event }: { event: Event }) {
   return (
