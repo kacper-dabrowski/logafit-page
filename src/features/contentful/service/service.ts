@@ -26,7 +26,11 @@ export class ContentfulClientService {
   private async fetchEntries(name: AvailableEntity): Promise<unknown[]> {
     const response = await this.client.getEntries({ content_type: name });
 
-    return response.items.map((item) => item.fields);
+    return response.items.map((item) => ({
+      ...item.fields,
+      createdAt: item.sys.createdAt,
+      updatedAt: item.sys.updatedAt,
+    }));
   }
 }
 

@@ -16,6 +16,8 @@ export interface Event {
   accentColor: string;
   slug: string;
   details: any;
+  createdAt: string;
+  updatedAt: string;
 }
 
 const eventSchema = z
@@ -32,6 +34,8 @@ const eventSchema = z
       .object({ value: z.string() })
       .transform(({ value }) => value),
     order: z.number(),
+    createdAt: z.string(),
+    updatedAt: z.string(),
   })
   .transform((data) => ({
     ...data,
