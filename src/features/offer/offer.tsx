@@ -1,7 +1,6 @@
 "use client";
 
 import { PrimaryHeader } from "@/features/shared/typography/headers";
-import { useMemo } from "react";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
 
@@ -15,16 +14,8 @@ import { Tab } from "./tab";
 import { EventTiles } from "./events/components/tiles";
 import { OfferTab } from "./tab/tab";
 
-const headings: Record<Tab, string> = {
-  [Tab.SwimmingSchool]: "Zapisz swoje dziecko na zajęcia",
-  [Tab.AquaFitness]: "Zapisz się na zajęcia",
-  [Tab.PhysicalTherapy]: "Zapisz siebie lub swoje dziecko na zajęcia",
-  [Tab.Camps]: "Odkryj nasze obozy i kolonie",
-};
-
 export function Offer({ events }: { events: Event[] }) {
   const { getNavigationProps, activeTab } = useNavigation(Tab.SwimmingSchool);
-  const heading = useMemo(() => headings[activeTab], [activeTab]);
 
   return (
     <div>
@@ -49,7 +40,6 @@ export function Offer({ events }: { events: Event[] }) {
           Obozy i kolonie
         </OfferButton>
       </div>
-      <h2 className={styles.heading}>{heading}</h2>
       <OfferTab tab={Tab.SwimmingSchool} activeTab={activeTab}>
         <SwimmingSchoolOffer />
       </OfferTab>

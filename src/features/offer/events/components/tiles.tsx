@@ -1,4 +1,4 @@
-import { Event } from "../../contentful/events/event.transformer";
+import { Event } from "../../../contentful/events/event.transformer";
 import { EventTile } from "./tile";
 import styles from "./tiles.module.scss";
 
