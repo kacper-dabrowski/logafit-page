@@ -31,6 +31,7 @@ const eventSchema = z
     accentColor: z
       .object({ value: z.string() })
       .transform(({ value }) => value),
+    order: z.number(),
   })
   .transform((data) => ({
     ...data,
