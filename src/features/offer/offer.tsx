@@ -4,20 +4,23 @@ import { PrimaryHeader } from "@/features/shared/typography/headers";
 import { useNavigation } from "../navigation/useNavigation";
 import { OfferButton } from "./button/button";
 
-import { Camps } from "../events/camps/camps";
-import { HealthTours } from "../events/healthTours/healthTours";
+import { Event } from "../contentful/events/event.transformer";
+import { EventTiles } from "../events/components/tiles";
 import styles from "./offer.module.scss";
 import { AquaFitnessOffer } from "./set/aquaFitness";
 import { PhysicalTherapyOffer } from "./set/physicalTherapy";
 import { SwimmingSchoolOffer } from "./set/swimmingSchool";
 import { Tab } from "./tab";
 
-const cards: Record<Tab, any> = {
-  [Tab.SwimmingSchool]: [<SwimmingSchoolOffer key={Tab.SwimmingSchool} />],
-  [Tab.PhysicalTherapy]: <PhysicalTherapyOffer key={Tab.PhysicalTherapy} />,
-  [Tab.AquaFitness]: <AquaFitnessOffer key={Tab.AquaFitness} />,
-  [Tab.Camps]: <Camps key={Tab.Camps} />,
-  [Tab.HealthTours]: <HealthTours key={Tab.HealthTours} />,
+const cards: Record<Tab, (args: any) => JSX.Element> = {
+  [Tab.SwimmingSchool]: () => <SwimmingSchoolOffer key={Tab.SwimmingSchool} />,
+  [Tab.PhysicalTherapy]: () => (
+    <PhysicalTherapyOffer key={Tab.PhysicalTherapy} />
+  ),
+  [Tab.AquaFitness]: () => <AquaFitnessOffer key={Tab.AquaFitness} />,
+  [Tab.Camps]: (events: Event[]) => (
+    <EventTiles key={Tab.Camps} events={events} />
+  ),
 };
 
 const headings: Record<Tab, string> = {
@@ -25,10 +28,9 @@ const headings: Record<Tab, string> = {
   [Tab.AquaFitness]: "Zapisz się na zajęcia",
   [Tab.PhysicalTherapy]: "Zapisz siebie lub swoje dziecko na zajęcia",
   [Tab.Camps]: "",
-  [Tab.HealthTours]: "",
 };
 
-export function Offer() {
+export function Offer({ events }: { events: Event[] }) {
   const { getNavigationProps, activeTab } = useNavigation(Tab.SwimmingSchool);
 
   return (
@@ -53,14 +55,11 @@ export function Offer() {
         <OfferButton variant="blue" {...getNavigationProps(Tab.Camps)}>
           Obozy i kolonie
         </OfferButton>
-        <OfferButton variant="lime" {...getNavigationProps(Tab.HealthTours)}>
-          Turnusy zdrowotne
-        </OfferButton>
       </div>
       <h2 className={styles.heading}>{headings[activeTab]}</h2>
-      <div>{cards[activeTab]}</div>
+      <div>{cards[activeTab](events)}</div>
       <div className={styles.hidden}>
-        {Object.values(cards).map((value) => value)}
+        {Object.values(cards).map((value) => value(events))}
       </div>
     </div>
   );

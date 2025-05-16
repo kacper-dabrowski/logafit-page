@@ -6,6 +6,7 @@ export enum AvailableEntity {
   FeaturedVenues = "featuredVenue",
   CompanyDetails = "contact",
   Locations = "locations",
+  Events = "events",
 }
 
 export class ContentfulClientService {

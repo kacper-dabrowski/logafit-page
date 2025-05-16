@@ -1,4 +1,4 @@
 export enum Tab {
-  Camps,
-  HealthTours,
+  WinterCamps,
+  SummerCamps,
 }
