@@ -23,7 +23,9 @@ describe("siema", () => {
   it("should fetch the content from contentful", async () => {
     expect(
       await contentfulClientService.getEntries(AvailableEntity.FeaturedVenues),
-    ).toEqual([{ key: "value" }]);
+    ).toEqual([
+      { key: "value", createdAt: "2021-01-01", updatedAt: "2021-01-01" },
+    ]);
 
     expect(contentfulClientMock.getEntries).toHaveBeenCalledWith({
       content_type: AvailableEntity.FeaturedVenues,
@@ -39,6 +41,11 @@ describe("siema", () => {
 
 function givenContentfulReturnsValues() {
   contentfulClientMock.getEntries.mockResolvedValue({
-    items: [{ fields: { key: "value" } }],
+    items: [
+      {
+        fields: { key: "value" },
+        sys: { createdAt: "2021-01-01", updatedAt: "2021-01-01" },
+      },
+    ],
   } as any);
 }

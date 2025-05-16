@@ -28,4 +28,6 @@ export const eventFixture: Event = {
   accentColor: "#000000",
   slug: "event-name",
   details: undefined,
+  createdAt: "2021-01-01",
+  updatedAt: "2021-01-01",
 };
