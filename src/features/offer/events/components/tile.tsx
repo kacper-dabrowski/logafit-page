@@ -1,6 +1,6 @@
 import { Event } from "@/features/contentful/events/event.transformer";
 import styles from "./tile.module.scss";
-import { CalendarIcon, PinIcon, UserGroupIcon } from "../../shared/icons";
+import { CalendarIcon, PinIcon, UserGroupIcon } from "../../../shared/icons";
 import { EventButton } from "./button";
 
 export function EventTile({ event }: { event: Event }) {
