@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { CompanyData } from "../contentful/companyData/companyData.transformer";
 
 interface LocalBusinessSchemaProps {
@@ -51,7 +52,8 @@ export function LocalBusinessSchema({ companyData }: LocalBusinessSchemaProps) {
   };
 
   return (
-    <script
+    <Script
+      id="local-business-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
