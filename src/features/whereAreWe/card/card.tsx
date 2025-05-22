@@ -26,7 +26,6 @@ export function WhereAreWeCard({
           src={image}
           alt={name}
           className={styles.image}
-          style={{ objectFit: "cover" }}
           sizes="(max-width: 768px) 100vw, 270px"
           quality={100}
         />
