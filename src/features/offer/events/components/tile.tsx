@@ -1,4 +1,5 @@
 import { Event } from "@/features/contentful/events/event.transformer";
+import type { JSX } from "react";
 import styles from "./tile.module.scss";
 import { CalendarIcon, PinIcon, UserGroupIcon } from "../../../shared/icons";
 import { EventButton } from "./button";

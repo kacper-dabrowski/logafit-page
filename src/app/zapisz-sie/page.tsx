@@ -1,5 +1,6 @@
 "use client";
 
+import type { JSX } from "react";
 import { useNavigation } from "../../features/navigation/useNavigation";
 import { OfferButton } from "../../features/offer/button/button";
 import { PrimaryHeader } from "../../features/shared/typography/headers";
