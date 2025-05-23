@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import desktopImage from "../../../public/assets/header.png";
-import mobileImage from "../../../public/assets/header_mobile.png";
+import mobileImage from "@/assets/images/header_mobile.png";
+import desktopImage from "@/assets/images/header.png";
 import styles from "./header.module.scss";
 
 export function Header() {
