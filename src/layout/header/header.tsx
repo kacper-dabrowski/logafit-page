@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import desktopImage from "../../../public/assets/header.png";
 import mobileImage from "../../../public/assets/header_mobile.png";
 import styles from "./header.module.scss";
@@ -17,7 +18,7 @@ export function Header() {
           priority
           className={styles.headerImage}
           sizes="(max-width: 1024px) 100vw, 774px"
-          placeholder="empty"
+          placeholder="blur"
         />
       </div>
 
@@ -32,9 +33,15 @@ export function Header() {
           priority
           className={styles.headerImage}
           sizes="(max-width: 1024px) 100vw, 936px"
-          placeholder="empty"
+          placeholder="blur"
         />
       </div>
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  other: {
+    "link-preload": ["/assets/header.png", "/assets/header_mobile.png"],
+  },
+};
