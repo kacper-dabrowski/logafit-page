@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Metadata } from "next";
-import styles from "./header.module.scss";
 import { dynamicBlurDataUrl } from "../../shared/images/blur";
+import styles from "./header.module.scss";
 
 const mobileImageUrl =
   "https://images.ctfassets.net/t01f4dq06ywt/IDl8hmN3OQTFaR4yHUT7p/c3a94793ec072cb923d0287a77dd75af/header_mobile.png?w=774&h=500&q=75";
@@ -45,9 +44,3 @@ export async function Header() {
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  other: {
-    "link-preload": ["/assets/header.png", "/assets/header_mobile.png"],
-  },
-};
