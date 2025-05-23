@@ -5,6 +5,11 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 32px;
+
+  // safari fix
+  a {
+    color: white !important;
+  }
 }
 
 .wrapper {
