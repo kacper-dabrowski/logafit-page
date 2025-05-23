@@ -28,6 +28,7 @@ export function WhereAreWeCard({
           className={styles.image}
           sizes="(max-width: 768px) 100vw, 270px"
           quality={100}
+          loading="lazy"
         />
       </div>
       <p className={styles.text} style={{ color: textColor }}>
