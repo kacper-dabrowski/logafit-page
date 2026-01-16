@@ -1,11 +1,37 @@
+import { Metadata } from "next";
 import { List } from "../../../features/infoPage/list";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
 import {
   FileLinksWrapper,
   FileLink,
 } from "../../../features/shared/fileLink/fileLink";
+import { BreadcrumbSchema } from "../../../features/seo/breadcrumbSchema";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "Pływanie dla niemowląt",
+  description:
+    "Pływanie dla niemowląt w Toruniu. Zajęcia od 3 miesiąca życia z profesjonalnymi instruktorami. Wspomaganie naturalnego rozwoju dziecka w wodzie.",
+  openGraph: {
+    title: "Pływanie dla niemowląt | Logafit Toruń",
+    description:
+      "Zajęcia pływania dla niemowląt od 3 miesiąca życia. Temperatura wody 32-33°C. Profesjonalni instruktorzy.",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-niemowlat",
+    images: [
+      {
+        url: "/assets/infants-swimming.png",
+        width: 520,
+        height: 430,
+        alt: "Pływające niemowlęta",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-niemowlat",
+  },
+};
 
 const imageProps = {
   src: "/assets/infants-swimming.png",
@@ -14,9 +40,35 @@ const imageProps = {
   alt: "pływające niemowlęta",
 };
 
+const BASE_URL = "https://logafit.pl";
+
 export default function Page() {
   return (
     <div className={styles.page}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Strona główna", url: BASE_URL },
+          { name: "Oferta", url: `${BASE_URL}/#oferta` },
+          {
+            name: "Pływanie dla niemowląt",
+            url: `${BASE_URL}/dowiedz-sie-wiecej/plywanie-dla-niemowlat`,
+          },
+        ]}
+      />
+      <ServiceSchema
+        serviceName="Pływanie dla niemowląt"
+        serviceDescription="Zajęcia pływania dla niemowląt od 3 miesiąca życia. Wspomaganie naturalnego rozwoju dziecka w wodzie."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-niemowlat"
+        image="https://logafit.pl/assets/infants-swimming.png"
+        offers={[
+          { name: "Zajęcia grupowe", price: "500", description: "10 wejść" },
+          {
+            name: "Zajęcia indywidualne",
+            price: "170",
+            description: "1 wejście",
+          },
+        ]}
+      />
       <h2 className={styles.heading}>Pływanie dla niemowląt</h2>
       <div>
         <TextWithImage centered imageProps={imageProps}>

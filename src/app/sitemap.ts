@@ -12,22 +12,62 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     await contentfulClientService.getEntries(AvailableEntity.Events),
   );
 
+  const currentDate = new Date().toISOString();
+
   const staticPages = [
     {
       url: `${BASE_URL}/`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${BASE_URL}/wydarzenia`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${BASE_URL}/dowiedz-sie-wiecej`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 1,
     },
     {
       url: `${BASE_URL}/zapisz-sie`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/plywanie-dla-niemowlat`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/plywanie-dla-dzieci`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/aqua-fitness`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/rehabilitacja-w-wodzie`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/plywanie-korekcyjne`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/koncepcja-halliwick`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/dowiedz-sie-wiecej/osteopatia`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     },
   ];
 

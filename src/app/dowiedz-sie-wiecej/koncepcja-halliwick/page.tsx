@@ -1,11 +1,50 @@
+import { Metadata } from "next";
 import clsx from "clsx";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
+
+export const metadata: Metadata = {
+  title: "Koncepcja Halliwick",
+  description:
+    "Koncepcja Halliwick w Toruniu - metoda nauki pływania dla osób z niepełnosprawnością. Kursy akredytowane przez Halliwick Polska. Logafit.",
+  openGraph: {
+    title: "Koncepcja Halliwick | Logafit Toruń",
+    description:
+      "Metoda Halliwick - nauka pływania dla osób z trudnościami fizycznymi i w uczeniu się.",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/koncepcja-halliwick",
+    images: [
+      {
+        url: "/assets/people-swimming.png",
+        width: 435,
+        height: 320,
+        alt: "Koncepcja Halliwick - ludzie na basenie",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/koncepcja-halliwick",
+  },
+};
 
 export default function Page() {
   return (
     <div className={styles.container}>
+      <ServiceSchema
+        serviceName="Kurs Koncepcja Halliwick"
+        serviceDescription="Kurs metody Halliwick - nauka pływania dla osób z niepełnosprawnością. Akredytacja Halliwick Polska."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/koncepcja-halliwick"
+        image="https://logafit.pl/assets/people-swimming.png"
+        offers={[
+          {
+            name: "Kurs Halliwick",
+            price: "1450",
+            description:
+              "Zajęcia praktyczne i teoretyczne, materiały, certyfikat",
+          },
+        ]}
+      />
       <h2 className={clsx(styles.mainHeader, styles.header)}>
         Koncepcja Halliwick®
       </h2>

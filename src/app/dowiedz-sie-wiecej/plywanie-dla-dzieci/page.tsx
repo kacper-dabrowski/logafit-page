@@ -1,12 +1,37 @@
+import { Metadata } from "next";
 import { clsx } from "clsx";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
 import styles from "./page.module.scss";
 import { List } from "../../../features/infoPage/list";
 import {
   FileLinksWrapper,
   FileLink,
 } from "../../../features/shared/fileLink/fileLink";
+
+export const metadata: Metadata = {
+  title: "Pływanie dla dzieci",
+  description:
+    "Nauka pływania dla dzieci w Toruniu. Szkoła pływania Logafit oferuje kursy dla dzieci od 3 roku życia. Zajęcia grupowe i indywidualne.",
+  openGraph: {
+    title: "Pływanie dla dzieci | Logafit Toruń",
+    description:
+      "Szkoła pływania dla dzieci w Toruniu. Kursy od 3 roku życia do poziomu zaawansowanego.",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-dzieci",
+    images: [
+      {
+        url: "/assets/plywanie-dla-niemowlat-cover.png",
+        width: 520,
+        height: 430,
+        alt: "Dziecko pływające w basenie",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-dzieci",
+  },
+};
 
 const imageProps = {
   src: "/assets/plywanie-dla-niemowlat-cover.png",
@@ -18,6 +43,12 @@ const imageProps = {
 export default function Page() {
   return (
     <div className={styles.container}>
+      <ServiceSchema
+        serviceName="Nauka pływania dla dzieci"
+        serviceDescription="Nauka pływania dla dzieci w Toruniu. Kursy od 3 roku życia do poziomu zaawansowanego."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-dzieci"
+        image="https://logafit.pl/assets/plywanie-dla-niemowlat-cover.png"
+      />
       <h2 className={clsx(styles.mainHeader, styles.header)}>
         Pływanie dla dzieci
       </h2>
