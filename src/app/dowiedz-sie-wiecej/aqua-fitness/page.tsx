@@ -1,10 +1,35 @@
+import { Metadata } from "next";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
 import {
   FileLink,
   FileLinksWrapper,
 } from "../../../features/shared/fileLink/fileLink";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "Aqua Fitness",
+  description:
+    "Aqua Fitness w Toruniu - bezpieczne i wszechstronne ćwiczenia w wodzie. Zajęcia dla dorosłych, w tym Aqua Mama dla kobiet w ciąży. Logafit.",
+  openGraph: {
+    title: "Aqua Fitness | Logafit Toruń",
+    description:
+      "Aqua Fitness - połączenie muzyki, ruchu i wody. Zajęcia dla dorosłych i kobiet w ciąży (Aqua Mama).",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/aqua-fitness",
+    images: [
+      {
+        url: "/assets/aqua-fitness-cover.png",
+        width: 430,
+        height: 320,
+        alt: "Aqua Fitness zajęcia",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/aqua-fitness",
+  },
+};
 
 const imageProps = {
   src: "/assets/aqua-fitness-cover.png",
@@ -16,6 +41,21 @@ const imageProps = {
 export default function Page() {
   return (
     <div className={styles.page}>
+      <ServiceSchema
+        serviceName="Aqua Fitness"
+        serviceDescription="Aqua Fitness - bezpieczne i wszechstronne ćwiczenia w wodzie. Zajęcia dla dorosłych i kobiet w ciąży."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/aqua-fitness"
+        image="https://logafit.pl/assets/aqua-fitness-cover.png"
+        offers={[
+          { name: "Jednorazowe wejście", price: "40" },
+          { name: "Karnet miesięczny", price: "120", description: "4 wejścia" },
+          {
+            name: "Karnet miesięczny open",
+            price: "30",
+            description: "za wejście",
+          },
+        ]}
+      />
       <h2 className={styles.heading}>Aqua Fitness</h2>
       <div>
         <TextWithImage imageProps={imageProps}>

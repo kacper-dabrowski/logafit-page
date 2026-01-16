@@ -1,6 +1,31 @@
+import { Metadata } from "next";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "Rehabilitacja w wodzie",
+  description:
+    "Rehabilitacja w wodzie w Toruniu. Terapia dla dzieci z zaburzeniami napięcia mięśniowego, wcześniaków i osób z niepełnosprawnością. Logafit.",
+  openGraph: {
+    title: "Rehabilitacja w wodzie | Logafit Toruń",
+    description:
+      "Terapia w wodzie dla dzieci - wykorzystanie walorów wody w rehabilitacji.",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
+    images: [
+      {
+        url: "/assets/couple-relaxing-cover.png",
+        width: 430,
+        height: 320,
+        alt: "Rehabilitacja w wodzie",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/rehabilitacja-w-wodzie",
+  },
+};
 
 const imageProps = {
   src: "/assets/couple-relaxing-cover.png",
@@ -12,6 +37,13 @@ const imageProps = {
 export default function Page() {
   return (
     <div className={styles.page}>
+      <ServiceSchema
+        serviceName="Rehabilitacja w wodzie"
+        serviceDescription="Terapia w wodzie dla dzieci z zaburzeniami napięcia mięśniowego, wcześniaków i osób z niepełnosprawnością."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/rehabilitacja-w-wodzie"
+        image="https://logafit.pl/assets/couple-relaxing-cover.png"
+        offers={[{ name: "Terapia", price: "150" }]}
+      />
       <h2 className={styles.heading}>Terapia w wodzie</h2>
       <div>
         <TextWithImage imageProps={imageProps} centered>

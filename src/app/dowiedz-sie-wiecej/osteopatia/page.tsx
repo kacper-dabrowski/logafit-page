@@ -1,7 +1,32 @@
+import { Metadata } from "next";
 import { List } from "../../../features/infoPage/list";
 import { TextWithImage } from "../../../features/infoPage/textWithImage";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
 import { Paragraph } from "../../../features/shared/typography/paragraph";
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "Osteopatia",
+  description:
+    "Osteopatia pediatryczna w Toruniu. Pomoc przy kolkach, asymetrii ciała, zaburzeniach rozwoju motorycznego, wadach postawy. Logafit.",
+  openGraph: {
+    title: "Osteopatia | Logafit Toruń",
+    description:
+      "Osteopatia dla noworodków, niemowląt i dzieci - kolki, asymetria ciała, wady postawy.",
+    url: "https://logafit.pl/dowiedz-sie-wiecej/osteopatia",
+    images: [
+      {
+        url: "/assets/infants-swimming.png",
+        width: 520,
+        height: 430,
+        alt: "Osteopatia pediatryczna",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://logafit.pl/dowiedz-sie-wiecej/osteopatia",
+  },
+};
 
 const imageProps = {
   src: "/assets/infants-swimming.png",
@@ -13,6 +38,13 @@ const imageProps = {
 export default function Page() {
   return (
     <div className={styles.page}>
+      <ServiceSchema
+        serviceName="Osteopatia pediatryczna"
+        serviceDescription="Osteopatia dla noworodków, niemowląt i dzieci. Pomoc przy kolkach, asymetrii ciała, zaburzeniach rozwoju motorycznego."
+        serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/osteopatia"
+        image="https://logafit.pl/assets/infants-swimming.png"
+        offers={[{ name: "Wizyta osteopatyczna", price: "180" }]}
+      />
       <h2 className={styles.heading}>Osteopatia</h2>
       <div>
         <TextWithImage imageProps={imageProps}>
