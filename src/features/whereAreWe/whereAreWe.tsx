@@ -20,7 +20,7 @@ export function WhereAreWe({ entries }: WhereAreWeProps) {
       <div className={styles.wrapper}>
         {entries.map((entry) => (
           <WhereAreWeCard
-            image={`https:${entry.image.fields.file.url}`}
+            image={entry.image.fields.file.url}
             name={entry.name}
             key={entry.name}
             backgroundColor={entry.backgroundColor}
