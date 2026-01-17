@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   name: string;
   url: string;
 }

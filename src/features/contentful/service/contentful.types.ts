@@ -24,7 +24,7 @@ export const imageMetaSchema = z.object({
           width: z.number(),
         }),
       }),
-      url: z.string(),
+      url: z.string().transform((url) => `https:${url}`),
       fileName: z.string(),
     }),
   }),
