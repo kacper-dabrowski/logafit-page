@@ -1,14 +1,11 @@
-import { Metadata } from "next";
 import { clsx } from "clsx";
-import { TextWithImage } from "../../../features/infoPage/textWithImage";
-import { Paragraph } from "../../../features/shared/typography/paragraph";
-import { ServiceSchema } from "../../../features/seo/serviceSchema";
-import styles from "./page.module.scss";
+import { Metadata } from "next";
 import { List } from "../../../features/infoPage/list";
-import {
-  FileLinksWrapper,
-  FileLink,
-} from "../../../features/shared/fileLink/fileLink";
+import { TextWithImage } from "../../../features/infoPage/textWithImage";
+import { ServiceSchema } from "../../../features/seo/serviceSchema";
+import { FileLink } from "../../../features/shared/fileLink/fileLink";
+import { Paragraph } from "../../../features/shared/typography/paragraph";
+import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
   title: "Pływanie dla dzieci",
@@ -143,18 +140,18 @@ export default function Page() {
           </div>
           <div>
             <div>
-            <h2 className={styles.header}>Cennik</h2>
-            <List
-              items={[
-                "Zajęcia grupowe: 10 wejść – 600zł",
-                "Zajęcia indywidualne: 150zł za lekcję",
-              ]}
+              <h2 className={styles.header}>Cennik</h2>
+              <List
+                items={[
+                  "Zajęcia grupowe: 10 wejść – 600zł",
+                  "Zajęcia indywidualne: 150zł za lekcję",
+                ]}
               />
-              </div>
+            </div>
           </div>
-            <FileLink fileName="harmonogram_szkoła_pływania.pdf">
-              Harmonogram
-            </FileLink>
+          <FileLink fileName="harmonogram_szkoła_pływania.pdf">
+            Harmonogram
+          </FileLink>
         </div>
       </div>
     </div>
