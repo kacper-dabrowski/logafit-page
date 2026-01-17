@@ -113,16 +113,16 @@ export default function Page() {
               <h2 className={styles.secondaryHeader}>Cennik</h2>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <Paragraph>Jednorazowe wejście: 40 zł</Paragraph>
+                  <Paragraph>Jednorazowe wejście: 50 zł</Paragraph>
                 </li>
                 <br />
                 <li className={styles.listItem}>
-                  <Paragraph>Karnet miesięczny na 4 wejścia: 120 zł</Paragraph>
+                  <Paragraph>Karnet miesięczny na 4 wejścia: 140 zł</Paragraph>
                 </li>
                 <br />
                 <li className={styles.listItem}>
                   <Paragraph>
-                    Karnet miesięczny (open) - 30 zł za wejście
+                    Karnet miesięczny (open) - 35 zł za wejście
                   </Paragraph>
                 </li>
                 <FileLinksWrapper>
