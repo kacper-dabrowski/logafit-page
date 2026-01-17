@@ -61,12 +61,7 @@ export default function Page() {
         serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-niemowlat"
         image="https://logafit.pl/assets/infants-swimming.png"
         offers={[
-          { name: "Zajęcia grupowe", price: "500", description: "10 wejść" },
-          {
-            name: "Zajęcia indywidualne",
-            price: "170",
-            description: "1 wejście",
-          },
+          { name: "Zajęcia grupowe", price: "600", description: "10 wejść" },
         ]}
       />
       <h2 className={styles.heading}>Pływanie dla niemowląt</h2>
@@ -131,21 +126,13 @@ export default function Page() {
             </div>
             <div>
               <h2 className={styles.secondaryHeader}>Cennik</h2>
-              <List
-                items={[
-                  "Zajęcia grupowe: 10 wejść – 500 zł",
-                  "Zajęcia indywidualne: 1 wejście – 170 zł️",
-                ]}
-              />
+              <List items={["Zajęcia grupowe: 10 wejść – 600 zł"]} />
               <Paragraph className={styles.red}>
                 Realizujemy wyłącznie w przychodni Zdrowa Rodzina
               </Paragraph>
               <FileLinksWrapper>
                 <FileLink fileName="harmonogram_szkoła_pływania.pdf">
                   Harmonogram
-                </FileLink>
-                <FileLink fileName="grafik_szkoła_pływania.docx">
-                  Grafik
                 </FileLink>
               </FileLinksWrapper>
             </div>

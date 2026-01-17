@@ -46,7 +46,7 @@ export default function Page() {
         serviceDescription="Pływanie korekcyjne dla dzieci i młodzieży z wadami postawy - skolioza, kifoza, płaskostopie."
         serviceUrl="https://logafit.pl/dowiedz-sie-wiecej/plywanie-korekcyjne"
         image="https://logafit.pl/assets/baby-swimming.png"
-        offers={[{ name: "Cykl 10 spotkań", price: "500" }]}
+        offers={[{ name: "Cykl 10 spotkań", price: "600" }]}
       />
       <h2 className={styles.heading}>Pływanie korekcyjne</h2>
       <div>
@@ -68,7 +68,7 @@ export default function Page() {
             <br />
             <Paragraph>
               Zajęcia mają charakter grupowy z uwzględnieniem indywidualizacji
-              ćwiczeń. Koszt cyklu 10 spotkań wynosi 500 zł. Sesja trwa 45
+              ćwiczeń. Koszt cyklu 10 spotkań wynosi 600 zł. Sesja trwa 45
               minut.
             </Paragraph>
           </div>
@@ -77,7 +77,6 @@ export default function Page() {
             <FileLink fileName="harmonogram_szkoła_pływania.pdf">
               Harmonogram
             </FileLink>
-            <FileLink fileName="grafik_szkoła_pływania.docx">Grafik</FileLink>
           </FileLinksWrapper>
         </TextWithImage>
       </div>

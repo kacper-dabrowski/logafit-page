@@ -141,13 +141,20 @@ export default function Page() {
               przez biuro.
             </Paragraph>
           </div>
-
-          <FileLinksWrapper>
+          <div>
+            <div>
+            <h2 className={styles.header}>Cennik</h2>
+            <List
+              items={[
+                "Zajęcia grupowe: 10 wejść – 600zł",
+                "Zajęcia indywidualne: 150zł za lekcję",
+              ]}
+              />
+              </div>
+          </div>
             <FileLink fileName="harmonogram_szkoła_pływania.pdf">
               Harmonogram
             </FileLink>
-            <FileLink fileName="grafik_szkoła_pływania.docx">Grafik</FileLink>
-          </FileLinksWrapper>
         </div>
       </div>
     </div>
