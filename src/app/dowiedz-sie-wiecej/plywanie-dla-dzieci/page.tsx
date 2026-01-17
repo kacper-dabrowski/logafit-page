@@ -141,12 +141,7 @@ export default function Page() {
           <div>
             <div>
               <h2 className={styles.header}>Cennik</h2>
-              <List
-                items={[
-                  "Zajęcia grupowe: 10 wejść – 600zł",
-                  "Zajęcia indywidualne: 150zł za lekcję",
-                ]}
-              />
+              <List items={["Zajęcia grupowe: 10 wejść – 600zł"]} />
             </div>
           </div>
           <FileLink fileName="harmonogram_szkoła_pływania.pdf">

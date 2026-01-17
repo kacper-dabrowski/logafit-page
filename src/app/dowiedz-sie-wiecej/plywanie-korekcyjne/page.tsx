@@ -69,7 +69,7 @@ export default function Page() {
             <Paragraph>
               Zajęcia mają charakter grupowy z uwzględnieniem indywidualizacji
               ćwiczeń. Koszt cyklu 10 spotkań wynosi 600 zł. Sesja trwa 45
-              minut.
+              minut. Zajęcia indywidualne: 150zł za lekcję
             </Paragraph>
             <Paragraph className={styles.red}>
               Zajęcia odbywają się wyłącznie w Hotelu Copernicus
