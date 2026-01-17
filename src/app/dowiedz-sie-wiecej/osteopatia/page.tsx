@@ -102,7 +102,7 @@ export default function Page() {
             <div>
               <h3 className={styles.secondaryHeader}>Cennik</h3>
               <List
-                items={[{ title: "Wizyta osteopatyczna:", content: "180zł" }]}
+                items={[{ title: "Wizyta osteopatyczna:", content: "230zł" }]}
               />
             </div>
           </div>

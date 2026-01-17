@@ -127,9 +127,6 @@ export default function Page() {
             <div>
               <h2 className={styles.secondaryHeader}>Cennik</h2>
               <List items={["Zajęcia grupowe: 10 wejść – 600 zł"]} />
-              <Paragraph className={styles.red}>
-                Realizujemy wyłącznie w przychodni Zdrowa Rodzina
-              </Paragraph>
               <FileLinksWrapper>
                 <FileLink fileName="harmonogram_szkoła_pływania.pdf">
                   Harmonogram

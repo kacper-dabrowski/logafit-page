@@ -71,6 +71,9 @@ export default function Page() {
               ćwiczeń. Koszt cyklu 10 spotkań wynosi 600 zł. Sesja trwa 45
               minut.
             </Paragraph>
+            <Paragraph className={styles.red}>
+              Zajęcia odbywają się wyłącznie w Hotelu Copernicus
+            </Paragraph>
           </div>
 
           <FileLinksWrapper>
