@@ -16,6 +16,7 @@ export function PhysicalTherapySignForm() {
       <FormInput required type="tel" labelText="Telefon kontaktowy opiekuna" />
       <FormInput type="email" labelText="Adres email opiekuna" />
       <FormTextarea labelText="Opis schorzenia" />
+      <FormInput type="hidden" value="Osteopatia / Fizjoterapia" name="typ" />
       <FormButton />
     </SignForm>
   );
