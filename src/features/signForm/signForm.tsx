@@ -37,7 +37,7 @@ function formDataToObject(data: FormData) {
 }
 
 async function submitForm(data: Record<string, any>, form: HTMLFormElement) {
-  const url = "https://submit-form.com/hf6EMLT5W";
+  const url = "/api/contact";
 
   const response = await fetch(url, {
     method: "POST",
@@ -49,7 +49,7 @@ async function submitForm(data: Record<string, any>, form: HTMLFormElement) {
   });
 
   if (!response.ok) {
-    return;
+    throw new Error("Submission failed");
   }
 
   form.reset();
