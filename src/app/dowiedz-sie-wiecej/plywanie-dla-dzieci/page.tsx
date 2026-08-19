@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ContentfulPage } from "../../../features/contentful/pages/page";
+import { ActiveNowSignupForm } from "../../../features/signForm/activeNowSignupForm";
 
 export const metadata: Metadata = {
   title: "Pływanie dla dzieci",
@@ -36,6 +37,8 @@ export default function Page() {
           url: "https://logafit.pl/dowiedz-sie-wiecej/plywanie-dla-dzieci",
         },
       ]}
-    />
+    >
+      <ActiveNowSignupForm />
+    </ContentfulPage>
   );
 }

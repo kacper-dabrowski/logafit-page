@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
 import {
   documentToReactComponents,
   Options,
@@ -31,9 +32,11 @@ const richTextOptions: Options = {
 export async function ContentfulPage({
   slug,
   breadCrumbItems,
+  children,
 }: {
   slug: string;
   breadCrumbItems: BreadcrumbItem[];
+  children?: ReactNode;
 }) {
   const content = await contentfulClientService.getEntries(
     AvailableEntity.Pages,
@@ -75,6 +78,7 @@ export async function ContentfulPage({
       <ContentfulWrapper>
         {documentToReactComponents(page?.content, richTextOptions)}
       </ContentfulWrapper>
+      {children}
     </div>
   );
 }
