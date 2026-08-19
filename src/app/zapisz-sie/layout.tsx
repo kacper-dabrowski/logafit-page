@@ -6,11 +6,11 @@ import styles from "./layout.module.scss";
 export const metadata: Metadata = {
   title: "Zapisz się na zajęcia",
   description:
-    "Zapisz się na szkolę pływania, aqua fitness lub osteopatię w Logafit Toruń. Wybierz aktywność i wypełnij formularz zgłoszeniowy.",
+    "Zapisz się na zajęcia w Logafit Toruń. Wybierz termin z aktualnego grafiku i wypełnij formularz zapisów online.",
   openGraph: {
     title: "Zapisz się na zajęcia | Logafit Toruń",
     description:
-      "Zapisz się na szkolę pływania, aqua fitness lub osteopatię w Logafit Toruń.",
+      "Wybierz zajęcia z aktualnego grafiku Logafit Toruń i zapisz się online.",
     url: "https://logafit.pl/zapisz-sie",
   },
   alternates: {
